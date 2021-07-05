@@ -1,0 +1,791 @@
+<!-- Custom GoPro nav -->
+<div id="gpl-js-layout">
+    <nav id="marketing-nav">
+        <div id="gpl-marketing-main-nav" class="gpl-grid">
+            <div class="gpl-col-2 gpl-logo">
+                <div class="gpl-marketing-logo">
+                    <a href="https://gopro.com/">
+                        <img alt="GoPro" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjA1IDU0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMDUgNTQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHJlY3QgeD0iODYuNyIgeT0iMzUuMSIgZmlsbD0iIzAwOUZERiIgd2lkdGg9IjIzLjgiIGhlaWdodD0iMTguMiIvPg0KCTxyZWN0IHg9IjExNS44IiB5PSIzNS4xIiBmaWxsPSIjMDA5RkRGIiB3aWR0aD0iMjMuOCIgaGVpZ2h0PSIxOC4yIi8+DQoJPGc+DQoJCTxyZWN0IHg9IjE3NCIgeT0iMzUuMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyMy44IiBoZWlnaHQ9IjE4LjIiLz4NCgk8L2c+DQoJPHJlY3QgeD0iMTQ0LjkiIHk9IjM1LjEiIGZpbGw9IiMwMDVEQUMiIHdpZHRoPSIyMy44IiBoZWlnaHQ9IjE4LjIiLz4NCgk8ZyBpZD0iR29Qcm9fQmVfYV9IRVJPIj4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTcyLjYsNi42aC0xLjJoLTMuOGgtMC4zaC0zLjZINjJjLTguOCwwLTEzLjIsMi4zLTEzLjIsNi45djMuOWwwLDB2My45YzAsNC42LDQuNCw2LjksMTMuMiw2LjloMS43aDMuNg0KCQkJaDAuM2gzLjhoMS4yYzguOCwwLDEzLjItMi4zLDEzLjItNi45di0zLjlsMCwwdi0zLjlDODUuOCw4LjksODEuNCw2LjYsNzIuNiw2LjZ6IE03OS44LDE3LjV2NC4zYzAsMS43LTIuNSwyLjYtNy40LDIuNmwtNC44LDB2MA0KCQkJaC0wLjN2MGwtNS4xLDBjLTQuOSwwLTcuNC0wLjgtNy40LTIuNnYtNC4zbDAsMHYtNC4zYzAtMS43LDIuNS0yLjYsNy40LTIuNmw1LjEsMHYwaDAuM3YwbDQuOCwwYzQuOSwwLDcuNCwwLjgsNy40LDIuNlYxNy41DQoJCQlMNzkuOCwxNy41eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNDIuOCwyMS40VjE2YzAtMS4yLTAuNy0xLjgtMi4yLTEuOGMtMSwwLTEuOCwwLTIuMywwSDI3LjdjLTEuMiwwLTIuMSwxLTIuMSwyLjJjMCwxLjIsMSwyLjIsMi4xLDIuMmg4LjgNCgkJCXYyLjljMCwwLjktMSwxLjYtMi45LDIuMWMtMS41LDAuNC0zLDAuNi00LjMsMC42SDE1LjFjLTUuNiwwLTguNS0wLjktOC41LTIuOFY3LjdjMC0xLjksMy40LTIuOCwxMC4xLTIuOGMwLjIsMCwwLjUsMCwwLjgsMA0KCQkJYzAuMywwLDAuNywwLDEuMiwwYzAsMCwwLjEsMCwwLjMsMGgxLjdDMjIuMyw1LDIzLDQuMywyMywyLjljMC0xLjQtMC44LTItMi4zLTJoLTUuNmMtMy40LDAtNi41LDAuNC05LjMsMS4zDQoJCQljLTMuNiwxLjItNS40LDMtNS40LDUuNXYxMy44YzAsMi42LDEuOCw0LjUsNS4zLDUuNmMyLjUsMC45LDUuNywxLjMsOS40LDEuM2gxNC4yYzMuNSwwLDYuNC0wLjUsOC44LTEuNA0KCQkJQzQxLjIsMjUuOCw0Mi44LDIzLjksNDIuOCwyMS40eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTQ2LjIsMjYuNVYxMy40YzAtMS45LDIuMy0yLjcsNi44LTIuN2gxLjFjMC41LDAsMC44LDAsMSwwYzEuNywwLDIuNy0wLjYsMi43LTEuOGMwLTEuNS0wLjgtMi4yLTIuMy0yLjINCgkJCWMtNC40LDAtNy43LDAuMy05LjksMC45Yy0zLjYsMS01LjQsMi45LTUuNCw1Ljh2MTMuMmMwLDEuMiwwLjcsMS44LDIuMSwxLjhjMS40LDAsMi4zLDAsMi42LTAuMUMxNDUuNywyOCwxNDYuMiwyNy40LDE0Ni4yLDI2LjV6DQoJCQkiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTk0LjIsMjguM2MxLjYsMCwyLjUsMCwyLjctMC4xYzAuOS0wLjIsMS4zLTAuOCwxLjMtMS43di04LjFoMjEuOGMzLjgsMCw3LTAuNCw5LjYtMS4zDQoJCQljMy40LTEuMyw1LjItMy4zLDUuMi02VjYuOGMwLTIuMi0xLjgtMy45LTUuNC01Yy0yLjUtMC43LTUuNS0xLjItOS0xLjJIOTQuMmMtMS40LDAtMi4yLDAuNi0yLjIsMS44djI0LjENCgkJCUM5MiwyNy42LDkyLjcsMjguMyw5NC4yLDI4LjN6IE05OC4yLDQuN2gyMi4yYzUuNCwwLDguMiwwLjgsOC4yLDIuNHYzLjhjMCwyLjItMi43LDMuNC04LjIsMy40SDk4LjJWNC43eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuNSw0NC45YzAuOS0wLjIsMS40LTAuOSwxLjQtMi4zYy0wLjEtMS42LTEtMi41LTIuNy0yLjZIMy45djEwaDUuOGMxLjYsMCwyLjQtMC44LDIuNC0yLjYNCgkJCUMxMi4xLDQ2LjEsMTEuNiw0NS4zLDEwLjUsNDQuOXogTTUuOCw0MS43bDMsMGMwLjYsMC4xLDEsMC42LDEsMS4zYzAsMC44LTAuNCwxLjItMS4yLDEuMmwtMi45LDBWNDEuN3ogTTguOSw0OC41SDUuOHYtMi43bDMuMiwwDQoJCQljMC43LDAuMSwxLjEsMC42LDEuMSwxLjRDMTAuMiw0OCw5LjgsNDguNSw4LjksNDguNXoiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE2LjgsNDNIMTVjLTEuMywwLTIuNCwxLjEtMi40LDIuM3YyLjRjMCwxLjMsMS4xLDIuMywyLjQsMi4zaDEuOGMxLjMsMCwyLjQtMS4xLDIuNC0yLjN2MGgtMS43DQoJCQljMCwwLjgtMC4zLDEuMS0wLjksMS4xYy0wLjQsMC0wLjcsMC0xLjEsMGMtMC45LDAtMS4yLTAuNy0xLjItMi4xaDQuOHYtMS4zQzE5LjIsNDQsMTguMSw0MywxNi44LDQzeiBNMTcuMSw0NS43aC0yLjgNCgkJCWMwLTEsMC41LTEuNiwxLjctMS42YzEuMSwwLDEuNCwwLjUsMS40LDEuNkwxNy4xLDQ1Ljd6Ii8+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOC4zLDQzLjZDMjguMyw0My42LDI4LjMsNDMuNiwyOC4zLDQzLjZjLTAuMS0wLjEtMC4yLTAuMS0wLjItMC4yYy0wLjEsMC0wLjEtMC4xLTAuMi0wLjENCgkJCWMwLDAtMC4xLDAtMC4xLDBjLTAuMSwwLTAuMS0wLjEtMC4yLTAuMWMwLDAtMC4xLDAtMC4xLDBjLTAuMSwwLTAuMSwwLTAuMiwwYzAsMC0wLjEsMC0wLjEsMGMtMC4xLDAtMC4yLDAtMC4zLDBsLTIuMiwwDQoJCQljLTAuNCwwLTEsMC4xLTEuNSwwLjZjLTAuMSwwLjEtMC4xLDAuMS0wLjIsMC4yYzAsMCwwLDAsMCwwYy0wLjIsMC4zLTAuMywwLjgtMC4zLDEuM2gxLjljMC0wLjYsMC40LTEsMS4zLTENCgkJCWMwLjgsMCwxLjMsMC4yLDEuMywwLjl2MS41Yy0wLjMtMC4zLTAuOC0wLjYtMS40LTAuN2MtMC4zLTAuMS0wLjgtMC4xLTEuNCwwYy0xLjQsMC4zLTIsMS4xLTIsMi4zYzAuMSwxLjMsMSwxLjksMi43LDINCgkJCWMwLjksMCwxLjYtMC4yLDIuMS0wLjhWNTBoMEgyOWgwdi00Ljd2LTAuMmMwLTAuNC0wLjEtMC43LTAuMS0wLjdDMjguOCw0NC4yLDI4LjYsNDMuOSwyOC4zLDQzLjZ6IE0yNy4yLDQ4LjENCgkJCUMyNy4yLDQ4LjEsMjcuMiw0OC4xLDI3LjIsNDguMWMwLDAuMy0wLjIsMC41LTAuNCwwLjdjLTAuMiwwLjEtMC40LDAuMi0wLjUsMC4yYy0wLjMsMC4xLTAuNiwwLjEtMC44LDAuMWMtMC40LDAtMS4xLTAuMS0xLjMtMC43DQoJCQljMCwwLDAsMCwwLTAuMWMtMC4xLTAuNCwwLTAuNywwLjItMC45YzAuMy0wLjMsMC42LTAuNCwwLjktMC41YzAuOC0wLjEsMS40LDAsMS43LDAuNGMwLjIsMC4yLDAuMiwwLjQsMC4yLDAuNg0KCQkJQzI3LjIsNDgsMjcuMiw0OC4xLDI3LjIsNDguMXoiLz4NCgkJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSI3Ni40LDUwIDc5LDUwIDc5LjcsNDcuMiA3Ny4xLDQ3LjIgCQkiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY0LjUsNDJjMC4yLTMtMy40LTIuOC0zLjUtMi44bC01LDBMNTMuNyw1MGgyLjdsMC45LTRoMHYwSDU5YzAsMCwxLjYsMi45LDEuOSwzLjloMy4yDQoJCQljLTEuMy0yLTEuNi0yLjktMi42LTQuNUM2My40LDQ0LjgsNjQuNCw0NC4yLDY0LjUsNDJ6IE01OS43LDQ0LjFoLTEuOWwwLjctMi45aDJDNjIuMyw0MS4zLDYxLjUsNDQuMSw1OS43LDQ0LjF6Ii8+DQoJCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNDEuOSwzOS4zIDQxLDQzLjIgMzcsNDMuMiAzNy45LDM5LjMgMzUuMSwzOS4zIDMyLjcsNTAgMzUuNSw1MCAzNi41LDQ1LjMgNDAuNiw0NS4zIDM5LjUsNTAgDQoJCQk0Mi4zLDUwIDQ0LjcsMzkuMyAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjQ5LjIsNDEuMiA1NC4xLDQxLjMgNTQuNSwzOS4zIDQ2LjgsMzkuMyA0NC40LDUwIDUyLjEsNTAgNTIuNSw0Ny45IDQ3LjYsNDcuOSA0OC4xLDQ1LjMgDQoJCQk1Mi45LDQ1LjMgNTMuNCw0My4yIDQ4LjcsNDMuMiAJCSIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNzAuOSwzOS4xYy0xLjEsMC4xLTEuOSwwLjUtMi4yLDAuNmMtMC45LDAuNS0xLjYsMS4yLTEuOSwxLjVjLTAuNywwLjktMS40LDItMS43LDMuMmMtMC4yLDEtMC4yLDIsMCwyLjcNCgkJCWMwLjIsMC42LDAuNSwxLjQsMS4yLDJjMC4yLDAuMiwwLjQsMC4zLDAuNiwwLjRjMC42LDAuNCwxLjUsMC42LDIuNywwLjZjMC4zLDAsMC41LDAsMC44LDBjMCwwLDEuMS0wLjEsMi4xLTAuNQ0KCQkJYzAuMi0wLjEsMC40LTAuMiwwLjUtMC4zYzAsMCwwLDAsMCwwYzEuMS0wLjYsMS44LTEuNSwyLjItMi4yYzAuNC0wLjcsMC43LTEuNSwxLTIuNGMwLDAsMCwwLDAtMC4xQzc3LjEsMzguOCw3MS45LDM5LDcwLjksMzkuMXoNCgkJCSBNNzMuNCw0NC42Yy0wLjIsMC43LTAuNSwxLjUtMC44LDJjLTAuOCwxLjMtMS45LDEuNS0yLjQsMS42Yy0xLjQsMC4xLTEuOS0wLjYtMi4yLTEuMmMwLDAsMCwwLDAtMC4xYzAsMCwwLDAsMCwwDQoJCQljLTAuNC0xLTAuMS0yLjItMC4xLTIuMnYwYzAtMC4xLDAtMC4yLDAtMC4yYzAuMS0wLjUsMC40LTEsMC42LTEuNGMwLjEtMC4yLDAuNS0wLjgsMC45LTEuMmMwLjItMC4yLDAuNS0wLjQsMC44LTAuNWMwLDAsMCwwLDAsMA0KCQkJYzAsMCwwLjEsMCwwLjEsMGMwLjItMC4xLDAuMy0wLjEsMC41LTAuMWMwLjIsMCwwLjktMC4xLDEuNSwwLjJjMC4yLDAuMSwwLjMsMC4yLDAuNSwwLjRjMC4xLDAuMSwwLjUsMC41LDAuNiwxLjINCgkJCUM3My41LDQzLjUsNzMuNiw0NCw3My40LDQ0LjZ6Ii8+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODUuNyw2LjZoLTEuMmgtMy44aC0wLjNoLTMuNmgtMS43Yy04LjgsMC0xMy4yLDIuMy0xMy4yLDYuOXYzLjlsMCwwdjMuOWMwLDQuNiw0LjQsNi45LDEzLjIsNi45aDEuNw0KCQkJaDMuNmgwLjNoMy44aDEuMmM4LjgsMCwxMy4yLTIuMywxMy4yLTYuOXYtMy45bDAsMHYtMy45QzE5OC45LDguOSwxOTQuNSw2LjYsMTg1LjcsNi42eiBNMTkyLjksMTcuNXY0LjNjMCwxLjctMi41LDIuNi03LjQsMi42DQoJCQlsLTQuOCwwdjBoLTAuM3YwbC01LjEsMGMtNC45LDAtNy40LTAuOC03LjQtMi42di00LjNsMCwwdi00LjNjMC0xLjcsMi41LTIuNiw3LjQtMi42bDUuMSwwdjBoMC4zdjBsNC44LDBjNC45LDAsNy40LDAuOCw3LjQsMi42DQoJCQlWMTcuNUwxOTIuOSwxNy41eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjAyLjYsMjguNWMwLDAtMC4xLTAuMS0wLjItMC4xYzAuMiwwLDAuNC0wLjEsMC41LTAuMmMwLjEtMC4xLDAuMi0wLjMsMC4yLTAuNGMwLTAuMSwwLTAuMy0wLjEtMC40DQoJCQljLTAuMS0wLjEtMC4yLTAuMi0wLjMtMC4yYy0wLjEsMC0wLjMtMC4xLTAuNS0wLjFoLTEuMXYyLjRoMC4zdi0xLjFoMC40YzAuMSwwLDAuMSwwLDAuMiwwYzAuMSwwLDAuMSwwLDAuMSwwLjENCgkJCWMwLDAsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLjEsMC4xLDAuMiwwLjIsMC4zbDAuMywwLjVoMC40bC0wLjQtMC43QzIwMi44LDI4LjcsMjAyLjcsMjguNiwyMDIuNiwyOC41eiBNMjAyLjIsMjguMmgtMC43di0wLjhoMC44DQoJCQljMC4yLDAsMC4zLDAsMC40LDAuMWMwLjEsMC4xLDAuMSwwLjIsMC4xLDAuM2MwLDAuMSwwLDAuMi0wLjEsMC4yYzAsMC4xLTAuMSwwLjEtMC4yLDAuMUMyMDIuNSwyOC4xLDIwMi4zLDI4LjIsMjAyLjIsMjguMnoiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwMi4xLDI1LjljLTEuNCwwLTIuNSwxLjEtMi41LDIuNWMwLDEuNCwxLjEsMi41LDIuNSwyLjVjMS40LDAsMi41LTEuMSwyLjUtMi41DQoJCQlDMjA0LjYsMjcsMjAzLjUsMjUuOSwyMDIuMSwyNS45eiBNMjAyLjEsMzAuNmMtMS4yLDAtMi4yLTEtMi4yLTIuMmMwLTEuMiwxLTIuMiwyLjItMi4yYzEuMiwwLDIuMiwxLDIuMiwyLjINCgkJCUMyMDQuMiwyOS42LDIwMy4yLDMwLjYsMjAyLjEsMzAuNnoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==">
+                    </a>
+                </div>
+            </div>
+            <div class="gpl-col-6">
+                <div class="gpl-marketing-main-links">
+                    <ul>
+                        <li>
+                            <a id="gpl-products-link" href="https://shop.gopro.com/EMEA/">
+              Shop
+            </a>
+                        </li>
+                        <li>
+                            <a id="gpl-channel-link" href="https://gopro.com/channel/" class="gpl-main-nav-link">
+              Videos + Photos
+            </a>
+                        </li>
+                        <li>
+                            <a id="gpl-support-link" href="https://gopro.com/help" class="gpl-main-nav-link">
+              Support
+            </a>
+                        </li>
+                        <li>
+                            <!-- Search button -->
+                            <span class="gpl-toggle-click" data-target="gpl-search-box"><i class="gpl-icon-search"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gpl-col-4">
+                <div class="gpl-marketing-nav-details">
+
+
+                    <div class="gpl-marketing-login gpl-log-out">
+                        <span class="gpl-toggle-click" data-target="gpl-account-info-box">
+                <p>Account</p><p>
+                <i class="gpl-icon-triangle-down"></i>
+
+            </p></span></div>
+
+                    <!-- country select  -->
+                    <div class="gpl-marketing-country">
+                        <span class="gpl-toggle-click" data-target="gpl-country-select-box">
+              <p>
+                <span class="gpl-hide-tablet">33-9-80130520</span> (FR)
+                        </p>
+                        <i class="gpl-icon-triangle-down"></i>
+                        </span>
+                    </div>
+
+                    <!-- marketing cart toggle -->
+                    <div class="gpl-marketing-cart-button gpl-toggle-click" data-target="gpl-mini-cart-box">
+                        <div class="gpl-icon-cart"></div>
+
+                        <span class="gpl-cart-count">0</span>
+                    </div>
+
+                </div>
+
+                <!-- marketing promo text -->
+                <div class="gpl-col-12 gpl-marketing-promo">
+                    <p class="gpl-toggle-click" data-target="gpl-marketing-promo-text">
+
+                    </p>
+
+                    <div id="gpl-marketing-promo-text" class="gpl-detail-box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- subnav -->
+        <div id="gpl-marketing-subnav" class="gpl-grid">
+            <a class="gpl-sub-nav-item" id="gpl-js-subnav-products" href="https://shop.gopro.com/EMEA/">
+                <div class="gp-sub-nav-image gpl-sub-nav-products-image"></div>
+                <div class="gpl-sub-nav-text">Shop Home</div>
+            </a>
+            <a class="gpl-sub-nav-item" href="https://shop.gopro.com/EMEA/cameras">
+                <div class="gp-sub-nav-image gpl-sub-nav-cameras-image"></div>
+                <div class="gpl-sub-nav-text">Cameras</div>
+            </a>
+            <a class="gpl-sub-nav-item gpl-sub-nav-mounts" href="https://shop.gopro.com/EMEA/mounts-accessories">
+                <div class="gp-sub-nav-image gpl-sub-nav-mounts-image"></div>
+                <div class="gpl-sub-nav-text">Mounts + Accessories</div>
+            </a>
+            <a class="gpl-sub-nav-item" href="https://shop.gopro.com/EMEA/softwareandapp">
+                <div class="gp-sub-nav-image gpl-sub-nav-software-image"></div>
+                <div class="gpl-sub-nav-text">Software + App</div>
+            </a>
+            <a class="gpl-sub-nav-item" href="https://shop.gopro.com/EMEA/shopbyactivity">
+                <div class="gp-sub-nav-image gpl-sub-nav-activity-image"></div>
+                <div class="gpl-sub-nav-text">Shop By Activity</div>
+            </a>
+            <a class="gpl-sub-nav-item" href="https://gopro.com/professional">
+                <div class="gp-sub-nav-image gpl-sub-nav-professional-image"></div>
+                <div class="gpl-sub-nav-text">Professional</div>
+            </a>
+        </div>
+
+        <!-- Flashes  -->
+        <div id="gpl-flashes" class="">
+        </div>
+
+        <!-- Search  -->
+        <div id="gpl-search-box" class="gpl-detail-box">
+            <form action="https://gopro.com/site-search" method="get">
+                <input type="text" name="q" class="gpl-marketing-search-input" placeholder="search...">
+
+                <button><i class="gpl-icon-search"></i></button>
+            </form>
+            <span data-target="gpl-search-box" class="gpl-js-close"><i class="gpl-icon-close"></i></span>
+        </div>
+
+        <!-- Country Select -->
+        <div id="gpl-country-select-wrapper">
+            <div id="gpl-country-select-box" class="gpl-detail-box">
+                <select id="gpa-js-location-select">
+
+                    <option value="AF">Afghanistan</option>
+
+                    <option value="AX">Aland Islands</option>
+
+                    <option value="AL">Albania</option>
+
+                    <option value="DZ">Algeria</option>
+
+                    <option value="AS">American Samoa</option>
+
+                    <option value="AD">Andorra</option>
+
+                    <option value="AO">Angola</option>
+
+                    <option value="AI">Anguilla</option>
+
+                    <option value="AQ">Antarctica</option>
+
+                    <option value="AG">Antigua and Barbuda</option>
+
+                    <option value="AR">Argentina</option>
+
+                    <option value="AM">Armenia</option>
+
+                    <option value="AW">Aruba</option>
+
+                    <option value="AU">Australia</option>
+
+                    <option value="AT">Austria</option>
+
+                    <option value="AZ">Azerbaijan</option>
+
+                    <option value="BS">Bahamas</option>
+
+                    <option value="BH">Bahrain</option>
+
+                    <option value="BD">Bangladesh</option>
+
+                    <option value="BB">Barbados</option>
+
+                    <option value="BY">Belarus</option>
+
+                    <option value="BE">Belgium</option>
+
+                    <option value="BZ">Belize</option>
+
+                    <option value="BJ">Benin</option>
+
+                    <option value="BM">Bermuda</option>
+
+                    <option value="BT">Bhutan</option>
+
+                    <option value="BO">Bolivia</option>
+
+                    <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+
+                    <option value="BA">Bosnia and Herzegovina</option>
+
+                    <option value="BW">Botswana</option>
+
+                    <option value="BV">Bouvet Island</option>
+
+                    <option value="BR">Brazil</option>
+
+                    <option value="IO">British Indian Ocean Territory</option>
+
+                    <option value="BN">Brunei Darussalam</option>
+
+                    <option value="BG">Bulgaria</option>
+
+                    <option value="BF">Burkina Faso</option>
+
+                    <option value="BI">Burundi</option>
+
+                    <option value="KH">Cambodia</option>
+
+                    <option value="CM">Cameroon</option>
+
+                    <option value="CA">Canada</option>
+
+                    <option value="CV">Cape Verde</option>
+
+                    <option value="KY">Cayman Islands</option>
+
+                    <option value="CF">Central African Republic</option>
+
+                    <option value="TD">Chad</option>
+
+                    <option value="CL">Chile</option>
+
+                    <option value="CN">China</option>
+
+                    <option value="CX">Christmas Island</option>
+
+                    <option value="CC">Cocos (Keeling) Islands</option>
+
+                    <option value="CO">Colombia</option>
+
+                    <option value="KM">Comoros</option>
+
+                    <option value="CG">Congo, Republic of</option>
+
+                    <option value="CK">Cook Islands</option>
+
+                    <option value="CR">Costa Rica</option>
+
+                    <option value="CI">Cote d'Ivoire</option>
+
+                    <option value="HR">Croatia/Hrvatska</option>
+
+                    <option value="CU">Cuba</option>
+
+                    <option value="CY">Cyprus</option>
+
+                    <option value="CZ">Czech Republic</option>
+
+                    <option value="DK">Denmark</option>
+
+                    <option value="DJ">Djibouti</option>
+
+                    <option value="DM">Dominica</option>
+
+                    <option value="DO">Dominican Republic</option>
+
+                    <option value="EC">Ecuador</option>
+
+                    <option value="EG">Egypt</option>
+
+                    <option value="SV">El Salvador</option>
+
+                    <option value="GQ">Equatorial Guinea</option>
+
+                    <option value="ER">Eritrea</option>
+
+                    <option value="EE">Estonia</option>
+
+                    <option value="ET">Ethiopia</option>
+
+                    <option value="FK">Falkland Islands</option>
+
+                    <option value="FO">Faroe Islands</option>
+
+                    <option value="FJ">Fiji</option>
+
+                    <option value="FI">Finland</option>
+                    <option value="FR" selected="selected">
+                        France
+                    </option>
+
+
+                    <option value="GF">French Guiana</option>
+
+                    <option value="PF">French Polynesia</option>
+
+                    <option value="TF">French Southern Territories</option>
+
+                    <option value="GA">Gabon</option>
+
+                    <option value="GM">Gambia</option>
+
+                    <option value="GE">Georgia</option>
+
+                    <option value="DE">Germany</option>
+
+                    <option value="GH">Ghana</option>
+
+                    <option value="GI">Gibraltar</option>
+
+                    <option value="GR">Greece</option>
+
+                    <option value="GL">Greenland</option>
+
+                    <option value="GD">Grenada</option>
+
+                    <option value="GP">Guadeloupe</option>
+
+                    <option value="GU">Guam</option>
+
+                    <option value="GT">Guatemala</option>
+
+                    <option value="GG">Guernsey</option>
+
+                    <option value="GN">Guinea</option>
+
+                    <option value="GW">Guinea-Bissau</option>
+
+                    <option value="GY">Guyana</option>
+
+                    <option value="HT">Haiti</option>
+
+                    <option value="HM">Heard and McDonald Islands</option>
+
+                    <option value="VA">Holy See (City Vatican State)</option>
+
+                    <option value="HN">Honduras</option>
+
+                    <option value="HK">Hong Kong</option>
+
+                    <option value="HU">Hungary</option>
+
+                    <option value="IS">Iceland</option>
+
+                    <option value="IN">India</option>
+
+                    <option value="ID">Indonesia</option>
+
+                    <option value="IR">Iran (Islamic Republic of)</option>
+
+                    <option value="IQ">Iraq</option>
+
+                    <option value="IE">Ireland</option>
+
+                    <option value="IM">Isle of Man</option>
+
+                    <option value="IL">Israel</option>
+
+                    <option value="IT">Italy</option>
+
+                    <option value="JM">Jamaica</option>
+
+                    <option value="JP">Japan</option>
+
+                    <option value="JE">Jersey</option>
+
+                    <option value="JO">Jordan</option>
+
+                    <option value="KZ">Kazakhstan</option>
+
+                    <option value="KE">Kenya</option>
+
+                    <option value="KI">Kiribati</option>
+
+                    <option value="KR">Korea, Republic of</option>
+
+                    <option value="KW">Kuwait</option>
+
+                    <option value="KG">Kyrgyzstan</option>
+
+                    <option value="LA">Lao People's Democratic Republic</option>
+
+                    <option value="LV">Latvia</option>
+
+                    <option value="LB">Lebanon</option>
+
+                    <option value="LS">Lesotho</option>
+
+                    <option value="LR">Liberia</option>
+
+                    <option value="LY">Libya</option>
+
+                    <option value="LI">Liechtenstein</option>
+
+                    <option value="LT">Lithuania</option>
+
+                    <option value="LU">Luxembourg</option>
+
+                    <option value="MO">Macau</option>
+
+                    <option value="MK">Macedonia</option>
+
+                    <option value="MG">Madagascar</option>
+
+                    <option value="MW">Malawi</option>
+
+                    <option value="MY">Malaysia</option>
+
+                    <option value="MV">Maldives</option>
+
+                    <option value="ML">Mali</option>
+
+                    <option value="MT">Malta</option>
+
+                    <option value="MH">Marshall Islands</option>
+
+                    <option value="MQ">Martinique</option>
+
+                    <option value="MR">Mauritania</option>
+
+                    <option value="MU">Mauritius</option>
+
+                    <option value="YT">Mayotte</option>
+
+                    <option value="MX">Mexico</option>
+
+                    <option value="FM">Micronesia, Federal State of</option>
+
+                    <option value="MD">Moldova, Republic of</option>
+
+                    <option value="MC">Monaco</option>
+
+                    <option value="MN">Mongolia</option>
+
+                    <option value="ME">Montenegro</option>
+
+                    <option value="MS">Montserrat</option>
+
+                    <option value="MA">Morocco</option>
+
+                    <option value="MZ">Mozambique</option>
+
+                    <option value="MM">Myanmar (Burma)</option>
+
+                    <option value="NA">Namibia</option>
+
+                    <option value="NR">Nauru</option>
+
+                    <option value="NP">Nepal</option>
+
+                    <option value="NL">Netherlands</option>
+
+                    <option value="NC">New Caledonia</option>
+
+                    <option value="NZ">New Zealand</option>
+
+                    <option value="NI">Nicaragua</option>
+
+                    <option value="NE">Niger</option>
+
+                    <option value="NG">Nigeria</option>
+
+                    <option value="NU">Niue</option>
+
+                    <option value="NF">Norfolk Island</option>
+
+                    <option value="MP">Northern Mariana Islands</option>
+
+                    <option value="NO">Norway</option>
+
+                    <option value="OM">Oman</option>
+
+                    <option value="PK">Pakistan</option>
+
+                    <option value="PW">Palau</option>
+
+                    <option value="PS">Palestinian Territories</option>
+
+                    <option value="PA">Panama</option>
+
+                    <option value="PG">Papua New Guinea</option>
+
+                    <option value="PY">Paraguay</option>
+
+                    <option value="PE">Peru</option>
+
+                    <option value="PH">Philippines</option>
+
+                    <option value="PN">Pitcairn Island</option>
+
+                    <option value="PL">Poland</option>
+
+                    <option value="PT">Portugal</option>
+
+                    <option value="PR">Puerto Rico</option>
+
+                    <option value="QA">Qatar</option>
+
+                    <option value="RE">Reunion Island</option>
+
+                    <option value="RO">Romania</option>
+
+                    <option value="RU">Russian Federation</option>
+
+                    <option value="RW">Rwanda</option>
+
+                    <option value="SH">Saint Helena</option>
+
+                    <option value="KN">Saint Kitts and Nevis</option>
+
+                    <option value="LC">Saint Lucia</option>
+
+                    <option value="MF">Saint Martin</option>
+
+                    <option value="VC">Saint Vincent and the Grenadines</option>
+
+                    <option value="WS">Samoa</option>
+
+                    <option value="SM">San Marino</option>
+
+                    <option value="ST">Sao Tome and Principe</option>
+
+                    <option value="SA">Saudi Arabia</option>
+
+                    <option value="SN">Senegal</option>
+
+                    <option value="RS">Serbia</option>
+
+                    <option value="SC">Seychelles</option>
+
+                    <option value="SL">Sierra Leone</option>
+
+                    <option value="SG">Singapore</option>
+
+                    <option value="SX">Sint Maarten</option>
+
+                    <option value="SK">Slovak Republic</option>
+
+                    <option value="SI">Slovenia</option>
+
+                    <option value="SB">Solomon Islands</option>
+
+                    <option value="SO">Somalia</option>
+
+                    <option value="ZA">South Africa</option>
+
+                    <option value="GS">South Georgia</option>
+
+                    <option value="ES">Spain</option>
+
+                    <option value="LK">Sri Lanka</option>
+
+                    <option value="PM">St. Pierre and Miquelon</option>
+
+                    <option value="SD">Sudan</option>
+
+                    <option value="SR">Suriname</option>
+
+                    <option value="SJ">Svalbard and Jan Mayen Islands</option>
+
+                    <option value="SZ">Swaziland</option>
+
+                    <option value="SE">Sweden</option>
+
+                    <option value="CH">Switzerland</option>
+
+                    <option value="SY">Syrian Arab Republic</option>
+
+                    <option value="TW">Taiwan</option>
+
+                    <option value="TJ">Tajikistan</option>
+
+                    <option value="TZ">Tanzania</option>
+
+                    <option value="TH">Thailand</option>
+
+                    <option value="TG">Togo</option>
+
+                    <option value="TK">Tokelau</option>
+
+                    <option value="TO">Tonga</option>
+
+                    <option value="TT">Trinidad and Tobago</option>
+
+                    <option value="TN">Tunisia</option>
+
+                    <option value="TR">Turkey</option>
+
+                    <option value="TM">Turkmenistan</option>
+
+                    <option value="TC">Turks and Caicos Islands</option>
+
+                    <option value="TV">Tuvalu</option>
+
+                    <option value="UG">Uganda</option>
+
+                    <option value="UA">Ukraine</option>
+
+                    <option value="AE">United Arab Emirates</option>
+
+                    <option value="GB">United Kingdom (GB)</option>
+
+                    <option value="US">United States</option>
+
+                    <option value="UY">Uruguay</option>
+
+                    <option value="UM">US Minor Outlying Islands</option>
+
+                    <option value="UZ">Uzbekistan</option>
+
+                    <option value="VU">Vanuatu</option>
+
+                    <option value="VE">Venezuela</option>
+
+                    <option value="VN">Vietnam</option>
+
+                    <option value="WF">Wallis and Futuna</option>
+
+                    <option value="EH">Western Sahara</option>
+
+                    <option value="YE">Yemen</option>
+
+                    <option value="ZM">Zambia</option>
+
+                    <option value="ZW">Zimbabwe</option>
+                </select>
+
+                <h4>Select your language</h4>
+
+                <div data-href="Layout.localizedLink(null, 'en-us')" class="gpa-js-link gpl-lang-en-us gpl-lang-active">
+
+                    English
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'es-la')" class="gpa-js-link gpl-lang-es-la">
+
+                    Español
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'fr-fr')" class="gpa-js-link gpl-lang-fr-fr">
+
+                    Français
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'it-it')" class="gpa-js-link gpl-lang-it-it">
+
+                    Italiano
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'de-de')" class="gpa-js-link gpl-lang-de-de">
+
+                    Deutsch
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'pt-br')" class="gpa-js-link gpl-lang-pt-br">
+
+                    Português
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'ja-jp')" class="gpa-js-link gpl-lang-ja-jp">
+
+                    日本語
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'ko-kr')" class="gpa-js-link gpl-lang-ko-kr">
+
+                    한국어
+                </div>
+
+                <div data-href="Layout.localizedLink(null, 'zh-cn')" class="gpa-js-link gpl-lang-zh-cn">
+
+                    普通话
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mini Cart -->
+        <div id="gpl-mini-cart-wrapper">
+            <div id="gpl-mini-cart-box" class="gpl-detail-box">
+                <div class="gpl-grid gpl-cart-header">
+                    <h2>Your cart</h2>
+                    <span data-target="gpl-mini-cart-box" class="gpl-js-close"><i class="gpl-icon-close"></i></span>
+                </div>
+
+                <div class="gpl-cart-body-container">
+                </div>
+
+                <div class="gpl-grid gpl-cart-checkout">
+                    <p>
+                        <span>Your cart is empty</span>
+                    </p>
+
+                    <a href="https://shop.gopro.com/EMEA/" class="gpl-button">
+            Shop
+            <i class="gpl-icon-arrow-right"></i>
+          </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div id="gpl-account-info-wrapper">
+            <div id="gpl-account-info-box" class="gpl-detail-box">
+                <div class="gpl-grid gpl-account-info-header">
+                    <h5>Account</h5>
+                    <span data-target="gpl-account-info-box" class="gpl-js-close"><i class="gpl-icon-close"></i></span>
+                </div>
+                <div class="gpl-grid gpl-account-info-body">
+                    <a href="https://gopro.com/media-manager/">My Media</a>
+                    <a href="https://gopro.com/settings/">Settings</a>
+                    <a href="https://gopro.com/logout/" rel="noreferrer">Sign Out</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div id="gpl-marketing-nav-mobile">
+            <div class="gpl-mobile-logo">
+                <a href="https://gopro.com/">
+                    <img alt="GoPro" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjA1IDU0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMDUgNTQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHJlY3QgeD0iODYuNyIgeT0iMzUuMSIgZmlsbD0iIzAwOUZERiIgd2lkdGg9IjIzLjgiIGhlaWdodD0iMTguMiIvPg0KCTxyZWN0IHg9IjExNS44IiB5PSIzNS4xIiBmaWxsPSIjMDA5RkRGIiB3aWR0aD0iMjMuOCIgaGVpZ2h0PSIxOC4yIi8+DQoJPGc+DQoJCTxyZWN0IHg9IjE3NCIgeT0iMzUuMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyMy44IiBoZWlnaHQ9IjE4LjIiLz4NCgk8L2c+DQoJPHJlY3QgeD0iMTQ0LjkiIHk9IjM1LjEiIGZpbGw9IiMwMDVEQUMiIHdpZHRoPSIyMy44IiBoZWlnaHQ9IjE4LjIiLz4NCgk8ZyBpZD0iR29Qcm9fQmVfYV9IRVJPIj4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTcyLjYsNi42aC0xLjJoLTMuOGgtMC4zaC0zLjZINjJjLTguOCwwLTEzLjIsMi4zLTEzLjIsNi45djMuOWwwLDB2My45YzAsNC42LDQuNCw2LjksMTMuMiw2LjloMS43aDMuNg0KCQkJaDAuM2gzLjhoMS4yYzguOCwwLDEzLjItMi4zLDEzLjItNi45di0zLjlsMCwwdi0zLjlDODUuOCw4LjksODEuNCw2LjYsNzIuNiw2LjZ6IE03OS44LDE3LjV2NC4zYzAsMS43LTIuNSwyLjYtNy40LDIuNmwtNC44LDB2MA0KCQkJaC0wLjN2MGwtNS4xLDBjLTQuOSwwLTcuNC0wLjgtNy40LTIuNnYtNC4zbDAsMHYtNC4zYzAtMS43LDIuNS0yLjYsNy40LTIuNmw1LjEsMHYwaDAuM3YwbDQuOCwwYzQuOSwwLDcuNCwwLjgsNy40LDIuNlYxNy41DQoJCQlMNzkuOCwxNy41eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNDIuOCwyMS40VjE2YzAtMS4yLTAuNy0xLjgtMi4yLTEuOGMtMSwwLTEuOCwwLTIuMywwSDI3LjdjLTEuMiwwLTIuMSwxLTIuMSwyLjJjMCwxLjIsMSwyLjIsMi4xLDIuMmg4LjgNCgkJCXYyLjljMCwwLjktMSwxLjYtMi45LDIuMWMtMS41LDAuNC0zLDAuNi00LjMsMC42SDE1LjFjLTUuNiwwLTguNS0wLjktOC41LTIuOFY3LjdjMC0xLjksMy40LTIuOCwxMC4xLTIuOGMwLjIsMCwwLjUsMCwwLjgsMA0KCQkJYzAuMywwLDAuNywwLDEuMiwwYzAsMCwwLjEsMCwwLjMsMGgxLjdDMjIuMyw1LDIzLDQuMywyMywyLjljMC0xLjQtMC44LTItMi4zLTJoLTUuNmMtMy40LDAtNi41LDAuNC05LjMsMS4zDQoJCQljLTMuNiwxLjItNS40LDMtNS40LDUuNXYxMy44YzAsMi42LDEuOCw0LjUsNS4zLDUuNmMyLjUsMC45LDUuNywxLjMsOS40LDEuM2gxNC4yYzMuNSwwLDYuNC0wLjUsOC44LTEuNA0KCQkJQzQxLjIsMjUuOCw0Mi44LDIzLjksNDIuOCwyMS40eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTQ2LjIsMjYuNVYxMy40YzAtMS45LDIuMy0yLjcsNi44LTIuN2gxLjFjMC41LDAsMC44LDAsMSwwYzEuNywwLDIuNy0wLjYsMi43LTEuOGMwLTEuNS0wLjgtMi4yLTIuMy0yLjINCgkJCWMtNC40LDAtNy43LDAuMy05LjksMC45Yy0zLjYsMS01LjQsMi45LTUuNCw1Ljh2MTMuMmMwLDEuMiwwLjcsMS44LDIuMSwxLjhjMS40LDAsMi4zLDAsMi42LTAuMUMxNDUuNywyOCwxNDYuMiwyNy40LDE0Ni4yLDI2LjV6DQoJCQkiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTk0LjIsMjguM2MxLjYsMCwyLjUsMCwyLjctMC4xYzAuOS0wLjIsMS4zLTAuOCwxLjMtMS43di04LjFoMjEuOGMzLjgsMCw3LTAuNCw5LjYtMS4zDQoJCQljMy40LTEuMyw1LjItMy4zLDUuMi02VjYuOGMwLTIuMi0xLjgtMy45LTUuNC01Yy0yLjUtMC43LTUuNS0xLjItOS0xLjJIOTQuMmMtMS40LDAtMi4yLDAuNi0yLjIsMS44djI0LjENCgkJCUM5MiwyNy42LDkyLjcsMjguMyw5NC4yLDI4LjN6IE05OC4yLDQuN2gyMi4yYzUuNCwwLDguMiwwLjgsOC4yLDIuNHYzLjhjMCwyLjItMi43LDMuNC04LjIsMy40SDk4LjJWNC43eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuNSw0NC45YzAuOS0wLjIsMS40LTAuOSwxLjQtMi4zYy0wLjEtMS42LTEtMi41LTIuNy0yLjZIMy45djEwaDUuOGMxLjYsMCwyLjQtMC44LDIuNC0yLjYNCgkJCUMxMi4xLDQ2LjEsMTEuNiw0NS4zLDEwLjUsNDQuOXogTTUuOCw0MS43bDMsMGMwLjYsMC4xLDEsMC42LDEsMS4zYzAsMC44LTAuNCwxLjItMS4yLDEuMmwtMi45LDBWNDEuN3ogTTguOSw0OC41SDUuOHYtMi43bDMuMiwwDQoJCQljMC43LDAuMSwxLjEsMC42LDEuMSwxLjRDMTAuMiw0OCw5LjgsNDguNSw4LjksNDguNXoiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE2LjgsNDNIMTVjLTEuMywwLTIuNCwxLjEtMi40LDIuM3YyLjRjMCwxLjMsMS4xLDIuMywyLjQsMi4zaDEuOGMxLjMsMCwyLjQtMS4xLDIuNC0yLjN2MGgtMS43DQoJCQljMCwwLjgtMC4zLDEuMS0wLjksMS4xYy0wLjQsMC0wLjcsMC0xLjEsMGMtMC45LDAtMS4yLTAuNy0xLjItMi4xaDQuOHYtMS4zQzE5LjIsNDQsMTguMSw0MywxNi44LDQzeiBNMTcuMSw0NS43aC0yLjgNCgkJCWMwLTEsMC41LTEuNiwxLjctMS42YzEuMSwwLDEuNCwwLjUsMS40LDEuNkwxNy4xLDQ1Ljd6Ii8+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOC4zLDQzLjZDMjguMyw0My42LDI4LjMsNDMuNiwyOC4zLDQzLjZjLTAuMS0wLjEtMC4yLTAuMS0wLjItMC4yYy0wLjEsMC0wLjEtMC4xLTAuMi0wLjENCgkJCWMwLDAtMC4xLDAtMC4xLDBjLTAuMSwwLTAuMS0wLjEtMC4yLTAuMWMwLDAtMC4xLDAtMC4xLDBjLTAuMSwwLTAuMSwwLTAuMiwwYzAsMC0wLjEsMC0wLjEsMGMtMC4xLDAtMC4yLDAtMC4zLDBsLTIuMiwwDQoJCQljLTAuNCwwLTEsMC4xLTEuNSwwLjZjLTAuMSwwLjEtMC4xLDAuMS0wLjIsMC4yYzAsMCwwLDAsMCwwYy0wLjIsMC4zLTAuMywwLjgtMC4zLDEuM2gxLjljMC0wLjYsMC40LTEsMS4zLTENCgkJCWMwLjgsMCwxLjMsMC4yLDEuMywwLjl2MS41Yy0wLjMtMC4zLTAuOC0wLjYtMS40LTAuN2MtMC4zLTAuMS0wLjgtMC4xLTEuNCwwYy0xLjQsMC4zLTIsMS4xLTIsMi4zYzAuMSwxLjMsMSwxLjksMi43LDINCgkJCWMwLjksMCwxLjYtMC4yLDIuMS0wLjhWNTBoMEgyOWgwdi00Ljd2LTAuMmMwLTAuNC0wLjEtMC43LTAuMS0wLjdDMjguOCw0NC4yLDI4LjYsNDMuOSwyOC4zLDQzLjZ6IE0yNy4yLDQ4LjENCgkJCUMyNy4yLDQ4LjEsMjcuMiw0OC4xLDI3LjIsNDguMWMwLDAuMy0wLjIsMC41LTAuNCwwLjdjLTAuMiwwLjEtMC40LDAuMi0wLjUsMC4yYy0wLjMsMC4xLTAuNiwwLjEtMC44LDAuMWMtMC40LDAtMS4xLTAuMS0xLjMtMC43DQoJCQljMCwwLDAsMCwwLTAuMWMtMC4xLTAuNCwwLTAuNywwLjItMC45YzAuMy0wLjMsMC42LTAuNCwwLjktMC41YzAuOC0wLjEsMS40LDAsMS43LDAuNGMwLjIsMC4yLDAuMiwwLjQsMC4yLDAuNg0KCQkJQzI3LjIsNDgsMjcuMiw0OC4xLDI3LjIsNDguMXoiLz4NCgkJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSI3Ni40LDUwIDc5LDUwIDc5LjcsNDcuMiA3Ny4xLDQ3LjIgCQkiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY0LjUsNDJjMC4yLTMtMy40LTIuOC0zLjUtMi44bC01LDBMNTMuNyw1MGgyLjdsMC45LTRoMHYwSDU5YzAsMCwxLjYsMi45LDEuOSwzLjloMy4yDQoJCQljLTEuMy0yLTEuNi0yLjktMi42LTQuNUM2My40LDQ0LjgsNjQuNCw0NC4yLDY0LjUsNDJ6IE01OS43LDQ0LjFoLTEuOWwwLjctMi45aDJDNjIuMyw0MS4zLDYxLjUsNDQuMSw1OS43LDQ0LjF6Ii8+DQoJCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNDEuOSwzOS4zIDQxLDQzLjIgMzcsNDMuMiAzNy45LDM5LjMgMzUuMSwzOS4zIDMyLjcsNTAgMzUuNSw1MCAzNi41LDQ1LjMgNDAuNiw0NS4zIDM5LjUsNTAgDQoJCQk0Mi4zLDUwIDQ0LjcsMzkuMyAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjQ5LjIsNDEuMiA1NC4xLDQxLjMgNTQuNSwzOS4zIDQ2LjgsMzkuMyA0NC40LDUwIDUyLjEsNTAgNTIuNSw0Ny45IDQ3LjYsNDcuOSA0OC4xLDQ1LjMgDQoJCQk1Mi45LDQ1LjMgNTMuNCw0My4yIDQ4LjcsNDMuMiAJCSIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNzAuOSwzOS4xYy0xLjEsMC4xLTEuOSwwLjUtMi4yLDAuNmMtMC45LDAuNS0xLjYsMS4yLTEuOSwxLjVjLTAuNywwLjktMS40LDItMS43LDMuMmMtMC4yLDEtMC4yLDIsMCwyLjcNCgkJCWMwLjIsMC42LDAuNSwxLjQsMS4yLDJjMC4yLDAuMiwwLjQsMC4zLDAuNiwwLjRjMC42LDAuNCwxLjUsMC42LDIuNywwLjZjMC4zLDAsMC41LDAsMC44LDBjMCwwLDEuMS0wLjEsMi4xLTAuNQ0KCQkJYzAuMi0wLjEsMC40LTAuMiwwLjUtMC4zYzAsMCwwLDAsMCwwYzEuMS0wLjYsMS44LTEuNSwyLjItMi4yYzAuNC0wLjcsMC43LTEuNSwxLTIuNGMwLDAsMCwwLDAtMC4xQzc3LjEsMzguOCw3MS45LDM5LDcwLjksMzkuMXoNCgkJCSBNNzMuNCw0NC42Yy0wLjIsMC43LTAuNSwxLjUtMC44LDJjLTAuOCwxLjMtMS45LDEuNS0yLjQsMS42Yy0xLjQsMC4xLTEuOS0wLjYtMi4yLTEuMmMwLDAsMCwwLDAtMC4xYzAsMCwwLDAsMCwwDQoJCQljLTAuNC0xLTAuMS0yLjItMC4xLTIuMnYwYzAtMC4xLDAtMC4yLDAtMC4yYzAuMS0wLjUsMC40LTEsMC42LTEuNGMwLjEtMC4yLDAuNS0wLjgsMC45LTEuMmMwLjItMC4yLDAuNS0wLjQsMC44LTAuNWMwLDAsMCwwLDAsMA0KCQkJYzAsMCwwLjEsMCwwLjEsMGMwLjItMC4xLDAuMy0wLjEsMC41LTAuMWMwLjIsMCwwLjktMC4xLDEuNSwwLjJjMC4yLDAuMSwwLjMsMC4yLDAuNSwwLjRjMC4xLDAuMSwwLjUsMC41LDAuNiwxLjINCgkJCUM3My41LDQzLjUsNzMuNiw0NCw3My40LDQ0LjZ6Ii8+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODUuNyw2LjZoLTEuMmgtMy44aC0wLjNoLTMuNmgtMS43Yy04LjgsMC0xMy4yLDIuMy0xMy4yLDYuOXYzLjlsMCwwdjMuOWMwLDQuNiw0LjQsNi45LDEzLjIsNi45aDEuNw0KCQkJaDMuNmgwLjNoMy44aDEuMmM4LjgsMCwxMy4yLTIuMywxMy4yLTYuOXYtMy45bDAsMHYtMy45QzE5OC45LDguOSwxOTQuNSw2LjYsMTg1LjcsNi42eiBNMTkyLjksMTcuNXY0LjNjMCwxLjctMi41LDIuNi03LjQsMi42DQoJCQlsLTQuOCwwdjBoLTAuM3YwbC01LjEsMGMtNC45LDAtNy40LTAuOC03LjQtMi42di00LjNsMCwwdi00LjNjMC0xLjcsMi41LTIuNiw3LjQtMi42bDUuMSwwdjBoMC4zdjBsNC44LDBjNC45LDAsNy40LDAuOCw3LjQsMi42DQoJCQlWMTcuNUwxOTIuOSwxNy41eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjAyLjYsMjguNWMwLDAtMC4xLTAuMS0wLjItMC4xYzAuMiwwLDAuNC0wLjEsMC41LTAuMmMwLjEtMC4xLDAuMi0wLjMsMC4yLTAuNGMwLTAuMSwwLTAuMy0wLjEtMC40DQoJCQljLTAuMS0wLjEtMC4yLTAuMi0wLjMtMC4yYy0wLjEsMC0wLjMtMC4xLTAuNS0wLjFoLTEuMXYyLjRoMC4zdi0xLjFoMC40YzAuMSwwLDAuMSwwLDAuMiwwYzAuMSwwLDAuMSwwLDAuMSwwLjENCgkJCWMwLDAsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLjEsMC4xLDAuMiwwLjIsMC4zbDAuMywwLjVoMC40bC0wLjQtMC43QzIwMi44LDI4LjcsMjAyLjcsMjguNiwyMDIuNiwyOC41eiBNMjAyLjIsMjguMmgtMC43di0wLjhoMC44DQoJCQljMC4yLDAsMC4zLDAsMC40LDAuMWMwLjEsMC4xLDAuMSwwLjIsMC4xLDAuM2MwLDAuMSwwLDAuMi0wLjEsMC4yYzAsMC4xLTAuMSwwLjEtMC4yLDAuMUMyMDIuNSwyOC4xLDIwMi4zLDI4LjIsMjAyLjIsMjguMnoiLz4NCgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwMi4xLDI1LjljLTEuNCwwLTIuNSwxLjEtMi41LDIuNWMwLDEuNCwxLjEsMi41LDIuNSwyLjVjMS40LDAsMi41LTEuMSwyLjUtMi41DQoJCQlDMjA0LjYsMjcsMjAzLjUsMjUuOSwyMDIuMSwyNS45eiBNMjAyLjEsMzAuNmMtMS4yLDAtMi4yLTEtMi4yLTIuMmMwLTEuMiwxLTIuMiwyLjItMi4yYzEuMiwwLDIuMiwxLDIuMiwyLjINCgkJCUMyMDQuMiwyOS42LDIwMy4yLDMwLjYsMjAyLjEsMzAuNnoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==">
+                </a>
+            </div>
+
+            <!-- mobile nav shopping cart -->
+            <div class="gpl-mobile-nav-actions">
+                <!--  Search Button -->
+                <span class="gpl-toggle-click" data-target="gpl-search-box">
+        <i class="gpl-icon-search"></i>
+      </span>
+
+                <!--  Mini Cart Button -->
+                <div class="gpl-cart-icon gpl-toggle-click" data-target="gpl-mini-cart-box">
+                    <i class="gpl-icon-cart"></i>
+
+                    <span class="gpl-cart-count">0</span>
+                </div>
+
+                <!--  Log In Button -->
+
+                <div class="gpl-mobile-log-in gp-log-out gpl-toggle-click" data-target="gpl-account-info-box">
+                    <img alt="Login" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjAuMSAoNzU5NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+MTAwIC0gaVBhZCBTcG90bGlnaHQ8L3RpdGxlPgogICAgPGRlc2NyaXB0aW9uPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjcmlwdGlvbj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPgogICAgICAgIDxnIGlkPSIxMDAtLS1pUGFkLVNwb3RsaWdodCIgc2tldGNoOnR5cGU9Ik1TQXJ0Ym9hcmRHcm91cCI+CiAgICAgICAgICAgIDxnIGlkPSJPdmFsLTYtKy1PdmFsLTQtKy1PdmFsLTUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTUwLDEwMCBDNzcuNjE0MjM3NSwxMDAgMTAwLDc3LjYxNDIzNzUgMTAwLDUwIEMxMDAsMjIuMzg1NzYyNSA3Ny42MTQyMzc1LDAgNTAsMCBDMjIuMzg1NzYyNSwwIDAsMjIuMzg1NzYyNSAwLDUwIEMwLDc3LjYxNDIzNzUgMjIuMzg1NzYyNSwxMDAgNTAsMTAwIFoiIGlkPSJPdmFsLTYiIGZpbGw9IiNGRkZGRkYiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04OS41MTQzMTM5LDgwLjY0MDcwMzkgQzgwLjM2Njk4ODksOTIuNDIwMDQxOSA2Ni4wNjg2OTE1LDEwMCA1MCwxMDAgQzM0LjAwNDA5MzUsMTAwIDE5Ljc2MjU3OSw5Mi40ODg1NTQ5IDEwLjYxMDMwNDQsODAuODAwNTEyNyBDMTUuMTkzNDIyOSw3Mi41NjY1NjIgMjMuOTkyMDkzNCw2Ni45NjQyODU3IDM0LjAzNTcxNDMsNjYuOTY0Mjg1NyBMNjYuMTc4NTcxNCw2Ni45NjQyODU3IEM3Ni4xNTcwNzk4LDY2Ljk2NDI4NTcgODQuOTA2NzI3NSw3Mi40OTQxNTg2IDg5LjUxNDMxMzksODAuNjQwNzAzOSBaIiBpZD0iT3ZhbC00IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNTAuMTA3MTQyOSw1OC45Mjg1NzE0IEM2My40MjExNTAyLDU4LjkyODU3MTQgNzQuMjE0Mjg1Nyw0OC4xMzU0MzU5IDc0LjIxNDI4NTcsMzQuODIxNDI4NiBDNzQuMjE0Mjg1NywyMS41MDc0MjEyIDYzLjQyMTE1MDIsMTAuNzE0Mjg1NyA1MC4xMDcxNDI5LDEwLjcxNDI4NTcgQzM2Ljc5MzEzNTUsMTAuNzE0Mjg1NyAyNiwyMS41MDc0MjEyIDI2LDM0LjgyMTQyODYgQzI2LDQ4LjEzNTQzNTkgMzYuNzkzMTM1NSw1OC45Mjg1NzE0IDUwLjEwNzE0MjksNTguOTI4NTcxNCBaIiBpZD0iT3ZhbC01IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=">
+                </div>
+
+                <!--  Hamburger button -->
+                <span class="gpl-toggle-click" data-target="gpl-mobile-sub-nav-box">
+        <i class="gpl-icon-hamburger"></i>
+      </span>
+            </div>
+
+            <!-- Mobile Sub Nav -->
+            <div id="gpl-mobile-sub-nav-box" class="gpl-detail-box">
+                <ul>
+                    <li class="sub-nav-item">
+                        <label for="gpl-mobile-sub-nav">Shop<i class="gpl-icon-arrow-right"></i>
+                            <input type="checkbox" id="gpl-mobile-sub-nav">
+                            <ul class="sub-nav-products">
+                                <li>
+                                    <a class="products-image" href="https://shop.gopro.com/EMEA/">
+                Shop Home<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                                <li>
+                                    <a class="cameras-image" href="https://shop.gopro.com/EMEA/cameras">
+                Cameras<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                                <li>
+                                    <a class="mounts-image" href="https://shop.gopro.com/EMEA/mounts-accessories">
+                Mounts + Accessories<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                                <li>
+                                    <a class="software-image" href="https://shop.gopro.com/EMEA/softwareandapp">
+                Software + App<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                                <li>
+                                    <a class="activity-image" href="https://shop.gopro.com/EMEA/shopbyactivity">
+                Shop By Activity<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                                <li>
+                                    <a class="pro-image" href="https://gopro.com/professional">
+                Professional<i class="gpl-icon-arrow-right"></i>
+              </a>
+                                </li>
+                            </ul>
+                        </label>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="https://gopro.com/channel/">
+            Videos + Photos<i class="gpl-icon-arrow-right"></i>
+          </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="https://gopro.com/help">
+            Support<i class="gpl-icon-arrow-right"></i>
+          </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

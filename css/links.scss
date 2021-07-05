@@ -1,0 +1,538 @@
+/* Links */
+a {
+	&.link-default {
+		&:link,
+		&:visited {
+			color: $color_gopro;
+			border-bottom: 3px solid $color_gopro;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			border-bottom: 3px solid $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+
+	&.link-neutral {
+		&:link,
+		&:visited {
+			color: $color_gopro_snow;
+			border-bottom: 3px solid $color_gopro_snow;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_white;
+			border-bottom: 3px solid $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-backgrounded {
+		&:link,
+		&:visited {
+			background-color: $color_gopro_white;
+			color: $color_gopro_black;
+			text-decoration: none;
+			padding: 0.1em 0.1em 0em 0.1em;
+		}
+		&:hover,
+		&:focus {
+			background-color: $color_gopro_blood;
+			text-decoration: none;
+		}
+	}
+
+	&.link-tab {
+		&:link,
+		&:visited {
+			display: inline-block;
+			color: $color_medium_grey;
+			font-family: $font_family_headline;
+			text-transform: uppercase;
+			letter-spacing: -0.02em;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color_gopro;
+			text-decoration: none;
+		}
+		&.active {
+			&:link,
+			&:visited {
+				color: $color_gopro_black;
+			}
+			&:hover,
+			&:focus {
+				color: $color_gopro_black;
+				cursor: default;
+			}
+		}
+	}
+
+	&.link-create {
+		&:link,
+		&:visited,
+		&>span {
+			color: $color_gopro_white;
+			font-family: $font_family_headline;
+			text-transform: uppercase;
+			text-decoration: none;
+			@include transition(color 0.3s);
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro;
+			text-decoration: none;
+		}
+		&>span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1em;
+		}
+		span {
+
+		}
+	}
+
+	&.checkbox-label {
+		color: $color_medium_grey;
+		font-size: $font_size_small !important;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	&.link-large {
+		&:link,
+		&:visited {
+			color: $color_gopro_gunmetal;
+			text-transform: uppercase;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+
+	&.link-abuse {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-video-social {
+		&:link,
+		&:visited {
+			font-size: $font_size_large;
+			color: $color_gopro_white;
+			display: inline-block;
+			padding: 0.4em;
+			@include border-radius(10em);
+			line-height: 0em;
+			margin-right: 0.1em;
+		}
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			opacity: 0.7;
+		}
+		&.facebook {
+			&:link {
+				background-color: $color_facebook;
+			}
+		}
+		&.twitter {
+			&:link {
+				background-color: $color_twitter;
+			}
+		}
+		&.google-plus {
+			&:link {
+				background-color: $color_google_plus;
+			}
+		}
+		&.email {
+			&:link {
+				background-color: $color_email;
+			}
+		}
+	}
+
+	&.link-icon {
+		&:link,
+		&:visited,
+		&:focus {
+			font-size: $font_size_base;
+			display: inline-block;
+			padding: 0.4em;
+			@include border-radius(10em);
+			line-height: 0em;
+			text-decoration: none;
+		}
+		&:hover {
+			text-decoration: none;
+			opacity: 0.7;
+		}
+		&.dark-on-clear-1 {
+			&:link,
+			&:visited {
+				background-color: $color_gopro_silver;
+				color: $color_gopro_black;
+			}
+		}
+	}
+
+	&.link-navbar-main {
+		&:link,
+		&:active,
+		&:focus,
+		&:visited {
+			color: $color_medium_grey;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: $font_size_xsmall;
+			letter-spacing: .2em;
+		}
+		&:hover {
+			color: $color_gopro_white;
+		}
+	}
+
+	&.link-welcome {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+			text-decoration: none;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-tag {
+		&:link,
+		&:visited {
+			margin-bottom: 0.2em;
+			margin-right: 0.15em;
+			display: inline-block;
+			color: $color_gopro_white;
+			background-color: $color_gopro;
+			padding: 0em 1.3em;
+			font-size: $font_size_xsmall;
+			text-transform: uppercase;
+			font-family: $font_family_headline;
+		}
+		&:hover,
+		&:focus {
+			background-color: $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+
+	&.link-social {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+			font-size: $font-size-xxlarge;
+			display: inline-block;
+			margin-right: 1em;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+
+	&.link-soft-dark {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+			font-size: $font_size_small;
+			display: inline-block;
+			margin: 0.2em 1em;
+			letter-spacing: 0.05em;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+
+	&.link-filter {
+		&:link,
+		&:visited {
+			font-family: $font_family_text;
+			text-transform: uppercase;
+			color: $color_medium_grey;
+			font-size: $font_size_small;
+			display: inline-block;
+			margin: 0.8em 1em;
+			letter-spacing: 0.1em;
+		}
+		&:hover,
+		&:focus {
+			font-family: $font_family_text;
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+		&.active {
+			font-family: $font_family_headline;
+			color: $color_gopro_white;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&.icon {
+			font-size: $font_size_xlarge;
+		}
+	}
+
+	&.link-paginate {
+		&:link,
+		&:visited {
+			font-family: $font_family_text;
+			text-transform: uppercase;
+			color: $color_medium_grey;
+			font-size: $font_size_large;
+			display: inline-block;
+			margin: 0.8em 0.5em;
+		}
+		&:hover,
+		&:focus {
+			font-family: $font_family_text;
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+		&.active {
+			font-family: $font_family_headline;
+			color: $color_gopro_white;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&.link-wall-cell {
+		&:link,
+		&:visited {
+			font-family: $font_family_headline;
+			text-transform: uppercase;
+			color: $color_gopro_snow;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-profile {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-user {
+		&:link,
+		&:hover,
+		&:focus,
+		&:visited {
+			text-decoration: none;
+			.title {
+				color: $color_gopro_white;
+				text-transform: uppercase;
+				font-size: $font_size_xxlarge;
+				font-family: $font_family_headline;
+				line-height: 1.1em;
+			}
+			.description {
+				color: $color_medium_grey;
+				font-size: $font_size_xsmall;
+			}
+		}
+	}
+
+	&.link-user-set {
+		&:link,
+		&:visited {
+			color: $color_gopro_white;
+			text-transform: uppercase;
+			font-size: $font_size_xxlarge;
+			font-family: $font_family_headline;
+			line-height: 1.1em;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		&>img {
+			display: none;
+		}
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	&.link-more-content {
+		&:link,
+		&:visited {
+			opacity: 0.6;
+			display: inline-block;
+			@include transition(opacity 0.3s);
+			margin: 0.15em;
+		}
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+		&>img {
+			max-width: 15em;
+			height: auto;
+		}
+	}
+	&.link-slider-thumb {
+		&:link,
+		&:visited {
+			position: relative;;
+			&:after {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $color_gopro_black;
+				@include transition(opacity 0.3s);
+				opacity: 0.2;
+			}
+		}
+		&:hover {
+			&:after {
+				opacity: 0;
+			}
+		}
+	}
+
+	&.link-pseudo-option {
+		&:link,
+		&:visited,
+		&:focus {
+			color: $color_gopro_black;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			text-decoration: none;
+		}
+		&.active {
+			background-color: $color_gopro_pacific;
+			color: $color_gopro_white;
+			&:focus {
+				text-decoration: none;
+			}
+		}
+		&:hover {
+			color: $color_gopro_white;
+			text-decoration: none;
+		}
+	}
+
+	&.link-pre-footer {
+		&:link,
+		&:visited,
+		&>i,
+		&>span {
+			color: $color_gopro;
+			text-decoration: none;
+		}
+		&>i,
+		&>span {
+			font-size: 0.9em;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			text-decoration: underline;
+		}
+	}
+
+	&.link-pre-footer-neutral {
+		&:link,
+		&:visited {
+			color: $color_medium_grey;
+			font-size: $font_size_xxxxsmall;
+			text-decoration: none;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_glacier;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Exception for pagerfanta: Normally link style should be declared like this: a.link-classname*/
+.pagerfanta {
+	li {
+		a {
+			&:link,
+			&:visited,
+			&:focus,
+			&:active {
+				font-family: $font_family_text;
+				text-transform: uppercase;
+				color: $color_medium_grey;
+				font-size: $font_size_large;
+				text-decoration: none;
+			}
+			&:hover {
+				color: $color_gopro_white;
+			}
+
+		}
+		&.active {
+			&>span {
+				font-family: $font_family_headline;
+				color: $color_gopro_white;
+				font-size: $font_size_large;
+			}
+		}
+	}
+}
+
+/* Exception for FAQ: Normally link style should be declared like this: a.link-classname*/
+.faq-item {
+	a {
+		&:link,
+		&:visited {
+			color: $color_gopro;
+			border-bottom: 3px solid $color_gopro;
+		}
+		&:hover,
+		&:focus {
+			color: $color_gopro_pacific;
+			border-bottom: 3px solid $color_gopro_pacific;
+			text-decoration: none;
+		}
+	}
+}

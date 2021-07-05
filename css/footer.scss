@@ -1,0 +1,29 @@
+/* Footer */
+footer {
+	.overlay {
+		// background-color: $color_gopro_tire;
+		opacity: 1;
+	}
+	h5 {
+		font-family: $font_family_text_2;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: $font_size_large;
+		letter-spacing: 0.1em;
+		// color: $color_medium_grey;
+	}
+	p {
+		// color: $color_medium_grey;
+		&.text {
+			// color: $color_medium_grey;
+			font-size: $font_size_small;
+			letter-spacing: 0.05em;
+			max-width: 18em;
+		}
+	}
+	hr {
+		border-top: 1px solid $color_medium_grey;
+		margin: 3em 0em;
+	}
+
+}

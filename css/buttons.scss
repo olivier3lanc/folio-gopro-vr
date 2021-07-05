@@ -1,0 +1,341 @@
+// Class for all buttons
+.btn {
+	border-style: solid;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	letter-spacing: 0.05em;
+	@include border-radius(2px);
+	@include transition(background-color 0.3s, border-color 0.3s, opacity 0.3s);
+	&:active:focus,
+	&:focus {
+		outline: none !important;
+	}
+	&+.btn {
+		margin-left: 0.3em;
+	}
+}
+
+
+
+// Standard size
+.btn-std {
+    font-size: $font_size_small;
+    padding: 0.6em 1.8em 0.6em 1.8em;
+	text-transform: uppercase;
+	border-width: 5px;
+}
+
+//Small size
+.btn-xs {
+    font-size: $font_size_xxxsmall;
+    padding: 0.4em 2em;
+    text-transform: uppercase;
+	border-width: 3px;
+}
+
+//Large size
+.btn-lg {
+    font-size: $font_size_base;
+    padding: 0.9em 3em 1.0em 3em;
+    text-transform: uppercase;
+	border-width: 5px;
+}
+
+/* Button connect with socials */
+.btn-facebook,
+.btn-google {
+	background-color: $color_gopro_gridtape;
+	color: $color_gopro_white;
+	border-color: $color_gopro_gridtape;
+	font-family: $font_family_text_3;
+}
+.btn-facebook:hover,
+.btn-facebook:active,
+.btn-facebook:focus {
+	background-color: $color_gopro_facebook;
+	color: $color_gopro_white;
+	border-color: $color_gopro_facebook;
+	@include box-shadow(none);
+}
+.btn-google:hover,
+.btn-google:active,
+.btn-google:focus {
+	background-color: $color_gopro_google;
+	color: $color_gopro_white;
+	border-color: $color_gopro_google;
+	@include box-shadow(none);
+}
+
+/* Button primary */
+.btn-primary {
+	background-color: $color_gopro;
+	font-family: $font_family_text_3;
+	color: $color_gopro_white;
+	border-color: $color_gopro;
+	&:hover,
+	&:focus, &:focus:hover,
+	&:active, &:active:hover, &:active:focus {
+		background-color: $color_gopro_pacific;
+		color: $color_gopro_white;
+		border-color: $color_gopro_pacific;
+		@include box-shadow(none);
+	}
+}
+
+.btn-iframe {
+	white-space: normal;
+	max-width: 80%;
+}
+
+/* Button pending */
+.btn-pending {
+	line-height: 1em;
+	background-color: $color_gopro_glacier;
+	font-family: $font_family_text_3;
+	color: $color_medium_grey;
+	border-color: $color_gopro_glacier;
+	&:hover,
+	&:focus, &:focus:hover,
+	&:active, &:active:hover, &:active:focus {
+		background-color: $color_gopro_glacier;
+		color: $color_medium_grey;
+		border-color: $color_gopro_glacier;
+		@include box-shadow(none);
+	}
+}
+
+/* Button gridtape */
+.btn-gridtape {
+	background-color: $color_gopro_gridtape;
+	font-family: $font_family_text_3;
+	color: $color_gopro_white;
+	border-color: $color_gopro_gridtape;
+	&:hover,
+	&:focus, &:focus:hover,
+	&:active, &:active:hover, &:active:focus {
+		background-color: $color_gopro_tire;
+		color: $color_gopro_white;
+		border-color: $color_gopro_tire;
+		@include box-shadow(none);
+	}
+}
+
+
+/* Button play */
+.btn-play {
+	background-color: $color_gopro;
+	color: $color_gopro_white;
+	border-color: $color_gopro;
+	opacity: 0.8;
+	@include border-radius(0em);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro_pacific;
+		color: $color_gopro_white;
+		border-color: $color_gopro_pacific;
+		opacity: 1;
+		@include box-shadow(none);
+	}
+	&>span {
+		font-size: $font_size_xxlarge;
+	}
+}
+
+
+/* Stroke button for dark background */
+.btn-stroke-light {
+	background-color: transparent;
+	color: $color_medium_grey;
+	border-color: $color_medium_grey;
+	font-family: $font_family_text_3;
+	@include box-shadow(none);
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro;
+		color: $color_gopro_white;
+		border-color: $color_gopro;
+		@include box-shadow(none);
+	}
+}
+
+
+/* Stroke button for light background */
+.btn-stroke-dark {
+	background-color: transparent;
+	color: $color_gopro_tire;
+	border-color: $color_gopro_tire;
+	font-family: $font_family_text_3;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro;
+		color: $color_gopro_white;
+		border-color: $color_gopro;
+		@include box-shadow(none);
+	}
+}
+
+
+/* Stroke button full white */
+.btn-stroke-white {
+	background-color: transparent;
+	color: $color_gopro_white;
+	border-color: $color_gopro_white;
+	font-family: $font_family_text_3;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro;
+		color: $color_gopro_white;
+		border-color: $color_gopro;
+		@include box-shadow(none);
+	}
+}
+
+
+/* Stroke button GoPro color */
+.btn-stroke-gopro {
+	background-color: transparent;
+	color: $color_gopro;
+	border-color: $color_gopro;
+	font-family: $font_family_text_3;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro_pacific;
+		color: $color_gopro_white;
+		border-color: $color_gopro_pacific;
+		@include box-shadow(none);
+	}
+}
+
+
+/* No stroke */
+.btn-no-stroke {
+	background-color: transparent;
+	color: $color_medium_grey;
+	font-family: $font_family_text_3;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color_gopro_snow;
+		color: $color_medium_grey;
+		@include box-shadow(none);
+	}
+}
+
+
+/* Edit button */
+.btn-edit {
+	@include border-radius(10em);
+	background-color: $color_gopro_black;
+	color: $color_gopro_white;
+	padding: 0.4rem 0rem;
+	width: 4rem;
+	height: 4rem;
+	line-height: 2.5rem;
+	font-size: 2rem;
+	&:hover:not(.disabled),
+	&:focus:not(.disabled),
+	&:active:not(.disabled) {
+		background-color: $color_gopro_pacific;
+		color: $color_gopro_white;
+		cursor: pointer;
+	}
+	&.dismiss {
+		line-height: 0;
+	}
+}
+
+
+/* Close button */
+.btn-close {
+	background-color: transparent;
+	padding: 0em;
+	color: $color_gopro_black;
+	font-size: $font_size_xxlarge;
+	line-height: 0em;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color_gopro_silver;
+		@include box-shadow(none);
+	}
+}
+
+/* Large Tabulation with centered icons (special markup) */
+.btn-tabulation {
+	display: table;
+	padding: 2.5em 1.8em;
+	background-color: transparent;
+	border-radius: 0;
+	&>span {
+		display: table-cell;
+		vertical-align: middle;
+		color: $color_gopro_white;
+		font-size: $font_size_small;
+		font-weight: bold;
+		line-height: 1.2em;
+		&:first-child {
+			padding-right: 1.5em;
+		}
+		&:last-child {
+			text-align: left;
+			white-space: normal;
+			word-spacing: 10em;
+			text-transform: uppercase;
+		}
+	}
+	&.active {
+		background-color: $color_gopro_white;
+		@include box-shadow(none);
+		&>span {
+			color: $color_gopro;
+		}
+	}
+	&:hover {
+		&>span {
+			color: $color_gopro;
+		}
+	}
+	&+.btn-tabulation {
+		border-top: 1px solid $color_gopro_white;
+		margin-left: 0;
+	}
+}
+@include screen-sm {
+	.btn-tabulation {
+		width: 100%;
+		padding: 1.0em 1.5em;
+		&>span {
+			font-size: $font_size_xxsmall;
+			&:last-child {
+				word-spacing: normal;
+				text-transform: none;
+			}
+		}
+	}
+}
+@include screen-xs {
+	.btn-tabulation {
+		display: inline-block;
+		padding: 1.0em 1.5em;
+		float: left;
+		&>span {
+			display: inline;
+			font-size: $font_size_xxsmall;
+			&:first-child {
+				padding-right: 0em;
+			}
+			&:last-child {
+				display: none;
+			}
+		}
+		&+.btn-tabulation {
+			border-left: 1px solid $color_gopro_white;
+			border-top: none;
+		}
+	}
+}

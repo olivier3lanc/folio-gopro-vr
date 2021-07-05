@@ -1,0 +1,206 @@
+//GoPro colors
+$color_gopro:               #00A3DA;
+$color_gopro_pacific:       #03BFFE;
+$color_gopro_atlantic:      #007FAA;
+$color_gopro_hardhat:       #F5A700;
+$color_gopro_finishline:    #7ED321;
+$color_gopro_blood:         #F7403D;
+
+$color_gopro_black:         #000;
+$color_gopro_asphalt:       #141414;
+$color_gopro_gridtape:      #222222;
+$color_gopro_tire:          #353535;
+$color_gopro_gunmetal:      #666666;
+$color_gopro_concrete:      #A4A5A5;
+$color_gopro_silver:        #D8D8D8;
+$color_gopro_glacier:       #F3F4F4;
+$color_gopro_snow:          #F9FAFA;
+$color_gopro_white:         #FFF;
+
+$color_gopro_facebook:      #3A5B94;
+$color_gopro_google:        #E34836;
+
+//Custom colors
+$color_medium_grey:         #999999;
+$color_spinner_grey:        #C0C0C0;
+$color_facebook:            #4E71A8;
+$color_twitter:             #1CB7EB;
+$color_google_plus:         #E1584B;
+$color_email:               #3498DB;
+
+//Break points
+$screen-xs-max:             768px;//544px;
+$screen-sm-min:             768px;//544px;
+$screen-sm-max:             992px;//768px;
+$screen-md-min:             992px;//768px;
+$screen-md-max:             1200px;//992px;
+$screen-lg-min:             1200px;//992px;
+$screen-lg-max:             1400px;
+$screen-xl-min:             1400px;
+
+//Font families
+$font_family_text:          'PF DinText Pro Thin', Arial, sans-serif;
+$font_family_text_2:        'Proxima Nova Regular', Arial, sans-serif;
+$font_family_text_3:        'PF DinText Pro Regular', Arial, sans-serif;
+$font_family_headline:      'PF DinText Pro Bold', Arial, sans-serif;
+
+
+//Font sizes
+$font_size_xxxxsmall:       0.8em;
+$font_size_xxxsmall:        1.0em;
+$font_size_xxsmall:         1.2em;
+$font_size_xsmall:          1.3em;
+$font_size_small:           1.4em;
+$font_size_base:            1.6em;
+$font_size_large:           1.8em;
+$font_size_xlarge:          2.0em;
+$font_size_xxlarge:         3.0em;
+$font_size_xxxlarge:        5.0em;
+$font_size_xxxxlarge:       7.0em;
+
+//Special font sizes
+$font_size_link_tab:        2.8em;
+
+//String replace
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+    $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") );
+    $formats: ( otf: "opentype", ttf: "truetype" );
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+@mixin google-fonts($fonts...) {
+    $url: "http://fonts.googleapis.com/css?family=";
+    $nb: 0;
+    @each $font-name in $fonts {
+        $nb: $nb + 1;
+        $nb-word: 0;
+        @each $word in $font-name {
+            $nb-word: $nb-word + 1;
+            $url: $url + $word;
+            @if $nb-word < length($font-name) {
+                $url: $url + "+";
+            }
+        }
+        @if $nb < length($fonts) {
+            $url: $url + "|";
+        }
+    }
+
+    @import url(str-replace(#{$url},' ','+'));
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transition($data...) {
+    -webkit-transition: $data;
+    -moz-transition: $data;
+    -ms-transition: $data;
+    transition: $data;
+}
+@mixin transform($data...) {
+    -webkit-transform: $data;
+    -moz-transform: $data;
+    -ms-transform: $data;
+    transform: $data;
+}
+@mixin box-shadow($data) {
+    -webkit-box-shadow: $data;
+    -moz-box-shadow: $data;
+    -ms-box-shadow: $data;
+    box-shadow: $data;
+}
+@mixin perspective($data) {
+    -webkit-perspective: $data;
+    -moz-perspective: $data;
+    -ms-perspective: $data;
+    perspective: $data;
+}
+@mixin filter($data) {
+    -webkit-filter: $data;
+    filter: $data;
+}
+@mixin screen-xs {
+    @media (max-width: $screen-xs-max) {
+        @content;
+    }
+}
+@mixin screen-sm {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @content;
+    }
+}
+@mixin screen-md {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @content;
+    }
+}
+@mixin screen-lg {
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        @content;
+    }
+}
+@mixin screen-xl {
+    @media (min-width: $screen-xl-min) {
+        @content;
+    }
+}
+@mixin keyframe($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+    @-o-keyframes #{$animation_name} {
+        @content;
+    }
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+@mixin animation ($animation, $delay, $duration, $iteration) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-iteration-count: $iteration;
+    -webkit-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-iteration-count: $iteration;
+    -moz-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-iteration-count: $iteration;
+    -o-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-iteration-count: $iteration;
+    animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+}

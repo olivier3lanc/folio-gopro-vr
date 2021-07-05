@@ -1,0 +1,29 @@
+
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'layout.scss';
+
+/*
+* COLORS - BACKGROUNDS - FONTS
+*/
+
+body, p, a, li, div, span, .btn {
+	font-family: $font_family_text;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font_family_headline;
+}
+
+@import 'links.scss';
+
+@import 'navbar.scss';
+
+@import 'buttons.scss';
+
+@import 'forms.scss';
+
+@import 'components.scss';
+
+@import 'footer.scss';
+
+@import 'utilities.scss';

@@ -1,0 +1,1509 @@
+/*
+* COMPONENTS
+* Only skin properties
+*/
+
+/* Global for body */
+body {
+	@include transition(filter 0.3s);
+	background-color: $color_gopro_black;
+}
+
+/* Logos */
+.gopro-logo-base {
+	height: 5em;
+	width: auto;
+}
+
+
+/* Sections */
+.section {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.pre-text {
+		text-transform: uppercase;
+		font-size: $font_size_large;
+		letter-spacing: 0.7em;
+	}
+	.pre-text-2 {
+		text-transform: uppercase;
+		font-size: $font_size_large;
+		letter-spacing: 0.3em;
+	}
+	@include screen-xs {
+		.pre-text-2 {
+			font-size: $font_size_small;
+		}
+	}
+	.text {
+		font-size: $font_size_base;
+		ul {
+			li {
+				font-size: $font_size_xxxsmall;
+			}
+		}
+	}
+
+	/* Responsive table */
+	table {
+		font-size: $font_size_xxxxsmall;
+		caption {
+			font-size: $font_size_base;
+			text-transform: uppercase;
+			font-family: $font_family_headline;
+			border-bottom: 1px solid rgba(128,128,128,0.2);
+		}
+		thead {
+			th {
+				border-bottom: 1px solid rgba(128,128,128,0.2);
+				text-align: center;
+				&:first-child {
+					text-align: left;
+				}
+			}
+		}
+		tr {
+			td {
+				border-bottom: 1px solid rgba(128,128,128,0.2);
+				text-align: center;
+				&:first-child {
+					text-align: left;
+				}
+				&.status {
+					text-align: center;
+					&.success {
+						background-color: $color_gopro_finishline;
+					}
+					&.danger {
+						background-color: $color_gopro_blood;
+					}
+					&.warning {
+						background-color: $color_gopro_hardhat;
+					}
+					&.yellow {
+						background-color: #FFD700;
+					}
+				}
+			}
+		}
+		@include screen-sm {
+			caption {
+				// background-color: rgba(128,128,128,0.05);
+			}
+			tr {
+				border: 1px solid $color_medium_grey;
+				td {
+					font-size: $font_size_xxsmall;
+					text-align: right;
+					&:before {
+					  font-weight: bold;
+					  font-size: $font_size_xxsmall;
+					}
+					&:first-child {
+						background-color: rgba(128,128,128,0.2);
+						text-align: right;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		@include screen-xs {
+			caption {
+				// background-color: rgba(128,128,128,0.2);
+			}
+			tr {
+				border: none;
+				td {
+					font-size: $font_size_xxsmall;
+					text-align: right;
+					&:before {
+					  font-weight: bold;
+					  font-size: $font_size_xxsmall;
+					}
+					&:first-child {
+						background-color: rgba(128,128,128,0.2);
+						text-align: right;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+	}
+	@include screen-xs {
+		.text {
+			font-size: $font_size_xxsmall;
+		}
+	}
+	@include screen-sm {
+		.text {
+			font-size: $font_size_xsmall;
+		}
+	}
+	h1, h2,	h3,	h4 {
+		text-transform: uppercase;
+	}
+	h1 {
+		font-size: $font_size_xxxxlarge;
+	}
+	@include screen-xs {
+		h1 {
+			font-size: $font_size_xxxlarge;
+		}
+	}
+	h2 {
+		font-size: $font_size_xxlarge;
+	}
+	h3 {
+		font-size: $font_size_xlarge;
+	}
+
+	/* Full page with content centered horizontaly and verticaly */
+	&.full-page {
+		&>.overlay {
+			background-color: $color_gopro_tire;
+		}
+		h1,	h2,	h3,	h4,	h5 {
+			color: $color_gopro_white;
+		}
+		p, div {
+			color: $color_medium_grey;
+		}
+		.text {
+			color: $color_gopro_concrete;
+		}
+		.pre-text {
+			color: $color_medium_grey;
+		}
+		.text-label {
+			font-family: $font_family_headline;
+			color: $color_gopro_snow;
+			text-transform: uppercase;
+			font-size: $font_size_small;
+		}
+		.text-help {
+			color: $color_medium_grey;
+			font-size: $font_size_xsmall;
+		}
+	}
+
+	/* Blurred section */
+	&.blur {
+		filter: blur(10px);
+		-webkit-filter: blur(10px);
+	}
+
+	/* Pre footer */
+	&.pre-footer {
+
+	}
+
+	/* Category header */
+	&.category-header {
+		h1 {
+			font-size: 10vmin;
+		}
+		h2 {
+			font-size: 6vmin;
+		}
+		.pre-text {
+			font-size: 2vmin;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+		&.minified {
+			h1 {
+				font-size: $font_size_xxlarge;
+				sup {
+					font-family: $font_family_text;
+					font-size: 30%;
+					top: -0.6em;
+				}
+			}
+			h2 {
+				font-size: $font_size_xxsmall;
+			}
+			.pre-text {
+				font-size: $font_size_xxxsmall;
+			}
+		}
+	}
+
+	/* Sumo */
+	&.sumo {
+		&>.overlay {
+			background-color: $color_gopro_black;
+			opacity: 0.7;
+		}
+	}
+
+	/* Section Dark */
+	&.dark {
+		h1,	h2,	h3,	h4,	h5 {
+			color: $color_gopro_white;
+		}
+		p, div {
+			color: $color_medium_grey;
+		}
+		.text {
+			color: $color_gopro_concrete;
+		}
+		.pre-text {
+			color: $color_medium_grey;
+		}
+		.text-label {
+			font-family: $font_family_headline;
+			color: $color_gopro_snow;
+			text-transform: uppercase;
+			font-size: $font_size_small;
+		}
+		.text-help {
+			color: $color_medium_grey;
+			font-size: $font_size_xsmall;
+		}
+		&>.overlay {
+			background-color: $color_gopro_black;
+			opacity: 0.85;
+			&.low-opacity {
+				opacity: 0.3;
+			}
+		}
+		&.category-header {
+			&>.overlay {
+				background-color: $color_gopro_black;
+				opacity: 0.5;
+			}
+			.pre-text {
+				color: $color_gopro_white;
+			}
+		}
+		&.fixed {
+			background-color: $color_gopro_white;
+			&>.overlay {
+				opacity: 0.9;
+				background-position: top;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				&:after {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,1+100 */
+					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+					background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
+				}
+			}
+		}
+	}
+
+	/* Section grid tape color (darker than dark) */
+	&.gridtape {
+		@extend .section.dark; //.section.dark properties + the following
+		&>.overlay {
+			background-color: $color_gopro_gridtape;
+			opacity: 1
+		}
+	}
+
+	/* Section Light */
+	&.light {
+		h1,	h2,	h3,	h4,	h5 {
+			color: $color_gopro_asphalt;
+		}
+		p, div {
+			color: $color_gopro_asphalt;
+		}
+		.text {
+			color: $color_gopro_tire;
+		}
+		.pre-text {
+			color: $color_medium_grey;
+		}
+		&>.overlay {
+			background-color: $color_gopro_white;
+			opacity: 0.9;
+			&.low-opacity {
+				opacity: 0.3;
+			}
+		}
+		&.category-header {
+			&>.overlay {
+				background-color: $color_gopro_white;
+				opacity: 0.5
+			}
+			.pre-text {
+				color: $color_gopro_black;
+			}
+		}
+	}
+
+	/* Profile header */
+	&.profile-header {
+
+		&>.overlay {
+			background-color: $color_gopro_gridtape;
+			opacity: 1;
+		}
+		p.pic {
+			width: 15vh;
+			height: 15vh;
+			@include border-radius(12em);
+			margin: auto;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			&>img {
+				display: none;
+			}
+		}
+		h1 {
+			color: $color_gopro_white;
+			font-size: $font_size_xxxlarge;
+			padding-left: 1em;
+			padding-right: 1em;
+			word-wrap: break-word;
+		}
+		@include screen-xs {
+			h1 {
+				font-size: $font_size_xlarge;
+			}
+		}
+		@include screen-sm {
+			h1 {
+				font-size: $font_size_xxlarge;
+			}
+		}
+		.text {
+			color: $color_medium_grey;
+			text-align: center;
+			font-size: $font_size_small;
+			padding-left: 1em;
+			padding-right: 1em;
+			word-wrap: break-word;
+		}
+		@include screen-xs {
+			.text {
+				font-size: $font_size_xsmall;
+			}
+		}
+		@include screen-sm {
+			.text {
+				font-size: $font_size_base;
+			}
+		}
+		p.likes,
+		p.views {
+			font-family: $font_family_text_2;
+			font-size: $font_size_large;
+			span {
+				text-transform: uppercase;
+				font-size: 50%;
+				letter-spacing: 0.3em;
+			}
+		}
+	}
+
+	/* Menu */
+	&.menu {
+		background-color: $color_gopro_black;
+		color: $color_medium_grey;
+		p {
+			a.link-filter {
+				span {
+					@include transform(scale(1.2));
+				}
+				&.active {
+					&.d {
+						span {
+							&.icon-keyboard_arrow_up {
+								color: $color_medium_grey;
+							}
+						}
+					}
+					&.a {
+						span {
+							&.icon-keyboard_arrow_down {
+								color: $color_medium_grey;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Wall */
+	&.wall {
+		background-color: $color_gopro_black;
+		&>.container-fluid {
+			&>.row {
+				&>div {
+					@include transition(width 1s, height 1s, padding 1s);
+					&>.overlay {
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+						opacity: 1;
+						@include transition(opacity 0.3s);
+					}
+					&.hoverable {
+						border-top: 6px solid $color_gopro_black;
+						border-left: 6px solid $color_gopro_black;
+						.table,
+						p.statistics {
+							opacity: 0;
+							@include transition(opacity 0.3s);
+						}
+						&:hover {
+							.overlay {
+								// @include transform(scale(1.2));
+							}
+						}
+						&:hover, &.viewed {
+							.overlay {
+								opacity: 0.5;
+							}
+							.table,
+							p.statistics {
+								opacity: 1;
+							}
+						}
+						&.force-hover {
+							&:after {
+								opacity: 0.4;
+								@include transition(opacity 0.3s);
+								background-color: $color_gopro_black;
+							}
+							&:hover {
+								.overlay:first-child {
+									opacity: 1;
+								}
+								&:after {
+									opacity: 0.2;
+								}
+							}
+						}
+						&.featured {
+							.table {
+								.cell {
+									h3 {
+										color: $color_gopro_white;
+										font-size: $font_size_xxxlarge;
+									}
+									@include screen-md {
+										h3 {
+											font-size: $font_size_xxlarge;
+										}
+									}
+									@include screen-sm {
+										h3 {
+											font-size: $font_size_xxlarge;
+										}
+									}
+									@include screen-xs {
+										h3 {
+											font-size: $font_size_xxlarge;
+										}
+									}
+									p.pre-text {
+										color: $color_gopro_white;
+										font-size: $font_size_xxsmall;
+									}
+								}
+							}
+						}
+					}
+					.table {
+						.cell {
+							text-align: center;
+							h3 {
+								color: $color_gopro_white;
+								font-size: $font_size_xxlarge;
+								padding-left: 1em;
+								padding-right: 1em;
+							}
+							@include screen-xs {
+								h3 {
+									font-size: 7vmin;
+								}
+							}
+							.text {
+								text-align: center;
+								color: $color_gopro_snow;
+								text-transform: uppercase;
+								letter-spacing: 0.3em;
+								font-size: $font_size_xxxsmall;
+								padding-left: 2em;
+								padding-right: 2em;
+							}
+						}
+					}
+					p.statistics {
+						text-align: center;
+						color: $color_gopro_snow;
+						text-transform: uppercase;
+						letter-spacing: 0.3em;
+						font-size: $font_size_xxxsmall;
+					}
+					&>a {
+						/* This a an invisible link for layout purpose, that's why it is here */
+						&.link-overlay {
+							// @include transition(box-shadow 0.3s);
+							&:hover {
+								// @include box-shadow(inset 0px 0px 40px 0px $color_gopro_black);
+							}
+						}
+					}
+                    .downloadable {
+                        position: absolute;
+                        top: 2rem;
+                        right: 7rem;
+                        z-index: 1600;
+                        background-color: white;
+                        color: black;
+                        &:hover {
+                            background-color: $color_gopro;
+                            color: white;
+                        }
+                    }
+					/* Video block menu buttons */
+					nav {
+						&.menublock {
+							position: absolute;
+							top: 2rem;
+							right: 2rem;
+							height: 45px;
+							z-index: 1600;
+							&>input {
+								display: block;
+								position: absolute;
+								cursor: pointer;
+								top: -15px;
+								left: 0;
+								width: 100%;
+								padding: 0;
+								height: 4em;
+								opacity: 0;
+								&+button {
+									line-height: 0;
+									&>span {
+										line-height: 0;
+										&:last-child {
+											display: none;
+										}
+									}
+									&+.dropdown {
+										opacity: 0;
+										transform: scale(0);
+										transform-origin: top center;
+										transition: opacity 0.3s, transform 0.3s;
+										&>button {
+											line-height: 0;
+											&>span {
+												line-height: 0;
+											}
+										}
+									}
+								}
+								&:checked {
+									&+button {
+										&>span {
+											&:first-child {
+												display: none;
+											}
+											&:last-child {
+												display: inherit;
+											}
+										}
+										&+.dropdown {
+											display: block;
+											opacity: 1;
+											transform: scale(1);
+											&>button {
+												margin-top: 0.2em;
+                                                &.disabled {
+        											cursor: select;
+        											opacity: 0.3;
+        										}
+											}
+										}
+									}
+								}
+							}
+							&:hover {
+								height: auto;
+								&>input {
+									&+button {
+										background-color: $color_gopro;
+									}
+									&:checked {
+										&+button {
+											background-color: $color_gopro_black;
+                                            // &+.dropdown {
+    										// 	&>button {
+                                            //         &.disabled, &:focus{
+                                            //             background-color: $color_gopro_black;
+                                            //         }
+    										// 	}
+    										// }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Pre footer */
+	&.pre-footer {
+		&>.overlay {
+			background-color: $color_gopro_tire;
+    		border-bottom: 1px solid #444;
+			opacity: 1;
+		}
+		.logo {
+			width: 7em;
+			height: auto;
+		}
+		p {
+			&.text {
+				font-size: $font_size_base;
+				a {
+					font-size: 0.7em;
+				}
+			}
+		}
+
+	}
+
+	/* FAQ */
+	.faq-item {
+		&>h2 {
+			// cursor: pointer;
+			font-family: $font_family_text;
+			text-transform: none;
+			padding-bottom: 0.4em;
+			border-bottom: 1px solid rgba(128,128,128,0.5);
+		}
+		@include screen-xs {
+			&>h2 {
+				font-size: $font_size_xlarge;
+			}
+		}
+		table {
+			.icon-check {
+				padding: 0.3em;
+				border: 2px solid $color_gopro_finishline;
+				color: $color_gopro_finishline;
+			}
+			.icon-close {
+				padding: 0.3em;
+				border: 2px solid $color_gopro_blood;
+				color: $color_gopro_blood;
+			}
+			.icon-notification {
+				color: $color_gopro_hardhat;
+				font-size: $font_size_base;
+			}
+		}
+	}
+
+	/* Video page */
+	.consistent-block {
+		background-color: $color_gopro_black;
+		&.expander {
+			background-color: lighten($color_gopro_black, 16%);
+		}
+	}
+	.statistics {
+        text-decoration: none;
+        display: inline-block;
+        &.right {
+            width: 6em;
+            vertical-align: top
+        }
+        &.left {
+            padding-top: 0.5em;
+        }
+		&#share-button, &#like-button, &#patate-button, &#download-button, &.hoverable {
+			cursor: pointer;
+			&:hover {
+				&>p.number {
+					color: $color_gopro_white;
+				}
+				&>.text {
+					color: $color_gopro_white;
+				}
+			}
+		}
+		&>p.number {
+			@include transition(color 0.3s);
+			font-family: $font_family_text_2;
+			font-size: $font_size_xlarge;
+			[class^="icon-"], [class*=" icon-"] {
+				&.liked, &.active {
+					color: $color_gopro_pacific;
+				}
+			}
+		}
+		&>.text {
+			@include transition(color 0.3s);
+			font-size: $font_size_xxxsmall;
+			text-transform: uppercase;
+			color: $color_gopro_gunmetal;
+			letter-spacing: 0.1em;
+		}
+        @include screen-sm {
+            &.right {
+                width: 17%;
+            }
+            &.left {
+                display: block;
+                margin-bottom: 2em;
+            }
+        }
+        @include screen-xs {
+            &.right {
+                width: 17%;
+            }
+            &.left {
+                display: block;
+                margin-bottom: 2em;
+            }
+        }
+		@include screen-xs {
+			&>.text {
+				font-size: $font_size_xxxxsmall;
+			}
+		}
+	}
+
+	/* Tags on video page */
+	.tags-zone {
+		line-height: 3.0em;
+		text-align: center;
+	}
+
+	/* User set video */
+	.user-set-video {
+		.table {
+			.cell {
+				.pic {
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+					@include border-radius(64px);
+				}
+			}
+		}
+	}
+
+	/* User set mini */
+	.user-set-mini {
+		&>.pic {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			@include border-radius(10em);
+		}
+		@include screen-xs {
+			&>div,
+			&>p {
+				text-align: center;
+			}
+		}
+	}
+
+	/* User set standard */
+	.user-set {
+		text-align: center;
+		h1 {
+			font-size: $font_size_xxlarge;
+		}
+		@include screen-xs {
+			h1 {
+				font-size: $font_size_xlarge;
+			}
+		}
+		&>.pic {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			@include border-radius(10em);
+		}
+		&>.name {
+			font-family: $font_family_headline;
+			font-size: $font_size_base;
+			text-transform: uppercase;
+			letter-spacing: 0em;
+		}
+		&>.category {
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+		&>.statistics {
+			text-transform: uppercase;
+			letter-spacing: 0.3em;
+			font-size: $font_size_base;
+		}
+		&>.statistics {
+			color: $color_gopro_white;
+		}
+	}
+}
+
+/* Shrunk container overlay */
+.shrunk-container {
+	&.overlay {
+		background-color: rgba(0,0,0,0.5);
+	}
+}
+
+/* Modal */
+body {
+	&.modal-open {
+		.section {
+			@include filter(blur(5px));
+		}
+	}
+}
+.modal-backdrop.in {
+	background-color: $color_gopro_tire;
+	opacity: 0.9;
+}
+.modal-content {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@include border-radius(0em);
+	@include box-shadow(0px 0px 50px 0px $color_gopro_black);
+	&>button.close {
+		font-size: $font_size_xlarge;
+	}
+	p {
+		&.text {
+			font-size: $font_size_base;
+		}
+		&.text-label {
+			font-family: $font_family_headline;
+			color: $color_gopro_black;
+			text-transform: uppercase;
+			font-size: $font_size_small;
+		}
+		&.text-help {
+			color: $color_medium_grey;
+			font-size: $font_size_xsmall;
+		}
+	}
+	.media-block {
+		background-color: $color_gopro_black;
+		&>.overlay {
+			opacity: 0.7;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.centered-content {
+			.table {
+				.cell {
+					text-align: center;
+					text-transform: uppercase;
+					color: $color_gopro_white;
+					h5 {
+						font-size: $font_size_xxlarge;
+					}
+					.text {
+						font-size: $font_size_xxsmall;
+					}
+					@include screen-xs {
+						h5 {
+							font-size: $font_size_large;
+						}
+						.text {
+							font-size: $font_size_xxxxsmall;
+						}
+					}
+				}
+			}
+		}
+	}
+	.tabs {
+		a {
+			&.link-tab {
+				font-size: $font_size_link_tab;
+			}
+		}
+		@include screen-md {
+			a {
+				&.link-tab {
+					font-size: $font_size_xlarge;
+				}
+			}
+		}
+		@include screen-sm {
+			a {
+				&.link-tab {
+					font-size: $font_size_large;
+				}
+			}
+		}
+		@include screen-xs {
+			a {
+				&.link-tab {
+					font-size: $font_size_large;
+				}
+			}
+		}
+	}
+	&.dark {
+		background-color: $color_gopro_black;
+		h1, h2, h3, h4, h5, h6,
+		p, span, li {
+			color: $color_gopro_white;
+		}
+	}
+}
+.modal-title {
+	font-size: $font_size_xxxlarge;
+	text-align: center;
+	text-transform: uppercase;
+}
+@include screen-xs {
+	.modal-title {
+		font-size: $font_size_xxlarge;
+	}
+}
+@include screen-sm {
+	.modal-title {
+		font-size: $font_size_xxlarge;
+	}
+}
+
+
+
+
+/* Slider / Carousel */
+.owl-carousel {
+	&#homepage-slider {
+		background-color: $color_gopro_black;
+	}
+	.owl-next, .owl-prev {
+		background-image: url('../images/ic_expand_more_white_24px.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		opacity: 0.6;
+		@include transition(transform 0.3s, opacity 0.3s);
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.owl-next {
+		@include transform(rotate(-90deg));
+	}
+	.owl-prev {
+		@include transform(rotate(90deg));
+	}
+	.owl-pagination {
+		.owl-page {
+			border: 3px solid $color_gopro_white;
+			padding: 0.4em;
+			margin-right: 1em;
+			opacity: 0.6;
+			@include transition(background-color 0.3s, border-color 0.3s, opacity 0.3s);
+			@include border-radius(64px);
+			&.active, &:hover {
+				background-color: $color_gopro;
+				border-color: $color_gopro;
+				opacity: 1;
+			}
+		}
+	}
+	.container-slide {
+		text-align: center;
+		background-color: $color_gopro_tire;
+		background-image: url(../images/GoPro_Logo_VR_Reversed_rev2.svg);
+		background-repeat: no-repeat;
+		background-size: 8%;
+		background-position: 50% 20%;
+		cursor: url('../images/grabbing.png'), move;
+		&>.overlay {
+			background-color: $color_gopro_black;
+			opacity: 0.3;
+		}
+		&>.centered-content {
+			.pre-text {
+				text-transform: uppercase;
+				color: $color_gopro_silver;
+				letter-spacing: 0.4em;
+				font-size: 2.0vh;
+			}
+			@include screen-xs {
+				.pre-text {
+					letter-spacing: 0.4em;
+				}
+			}
+			h3 {
+				text-transform: uppercase;
+				color: $color_gopro_white;
+				font-size: 10vmin;
+			}
+		}
+		.btn-play {
+			font-size: 2.5vh;
+		}
+
+		//Special slides
+		&.special-1 {
+			.image {
+			}
+			&>.overlay {
+				background-color: $color_gopro_white;
+				opacity: 0.7;
+			}
+			&>.centered-content{
+				.pre-text {
+					color: $color_gopro_black;
+					font-size: 2.5vh;
+					letter-spacing: 0.1em;
+				}
+				h3 {
+					color: $color_gopro_black;
+				}
+			}
+		}
+	}
+}
+
+
+/* Progress bars */
+.progress {
+	overflow: visible;
+	@include border-radius(0px);
+	background-color:rgba($color_gopro_white, 0.5);
+	.progress-bar {
+		background-color: $color_gopro_white;
+		&>span {
+			font-size: $font_size_xsmall;
+			font-family: $font_family_text_2;
+			color:$color_gopro_white;
+			text-transform: uppercase;
+			&:last-child {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+/* Rounded alphabet */
+.rounded-alphabet {
+	$size: $font_size_base;
+	&.size-xxxxsmall {
+		font-size: $size*0.2;
+	}
+	&.size-xxxsmall {
+		font-size: $size*0.4;
+	}
+	&.size-xxsmall {
+		font-size: $size*0.6;
+	}
+	&.size-xsmall {
+		font-size: $size*0.8;
+	}
+	&.size-small {
+		font-size: $size*0.9;
+	}
+	&.size-large {
+		font-size: $size*1.1;
+	}
+	&.size-xlarge {
+		font-size: $size*1.2;
+	}
+	&.size-xxlarge {
+		font-size: $size*1.4;
+	}
+	&.size-xxxlarge {
+		font-size: $size*1.6;
+	}
+	&.size-xxxxlarge {
+		font-size: $size*2;
+	}
+	border-width: $size*0.05;
+	border-style: solid;
+	font-family: $font_family_headline;
+	display: inline-block;
+	text-align: center;
+	@include border-radius(1220px);
+	width: $size*1.2;
+	height: $size*1.2;
+	padding: 0.57*$size 0em 0em 0em;
+	line-height: 0;
+	&.color-white {
+		border-color: $color_gopro_white;
+		color: $color_gopro_white;
+	}
+	&.color-black {
+		border-color: $color_gopro_black;
+		color: $color_gopro_black;
+	}
+}
+
+/* Available soon text */
+.available-soon {
+    font-size: $font_size_xsmall;
+    text-transform: uppercase;
+    font-weight: bold;
+	text-align: center;
+}
+
+/* Pagination / Pagerfanta */
+.pagerfanta {
+	list-style: none;
+	padding: 0em;
+	li {
+		display: inline-block;
+		margin: 1em;
+	}
+	.prev,
+	.next {
+		display: none;
+	}
+}
+
+/* Notifications */
+.notification-bar {
+	padding: 2em;
+	&>button {
+		margin-top: -1.5em;
+		width:3em;
+		height: 3em;
+		@include border-radius(10em);
+		border: none;
+		padding: 0em;
+		background-color: rgba(0,0,0,0.1);
+		@include transition(background-color 0.3s);
+		&:hover {
+			background-color: rgba(0,0,0,0.4);
+		}
+		&>span,
+		&>i {
+			width: 3em;
+			font-size: $font_size_large;
+			color: $color_gopro_white;
+		}
+	}
+	p {
+		font-size: $font_size_xsmall;
+		a {
+			// @include transition(background-color 0.3s);
+			// background-color: rgba(0,0,0,0.1);
+
+			&:hover {
+				// background-color: rgba(0,0,0,0.3);
+			}
+		}
+	}
+	@include screen-sm {
+		&>button {
+			margin-top: -0.75em;
+			width:1.5em;
+			height: 1.5em;
+			&>span,
+			&>i {
+				width: 1.5em;
+				font-size: $font_size_xxxsmall;
+			}
+		}
+		p {
+			font-size: $font_size_xxsmall;
+		}
+	}
+	@include screen-xs {
+		&>button {
+			margin-top: -0.75em;
+			width:1.5em;
+			height: 1.5em;
+			&>span,
+			&>i {
+				width: 1.5em;
+				font-size: $font_size_xxxsmall;
+			}
+		}
+		p {
+			font-size: $font_size_xxxsmall;
+		}
+	}
+	&.danger {
+		background-color: $color_gopro_blood;
+		p {
+			color: $color_gopro_white;
+			text-align: left;
+			a {
+				color: $color_gopro_white;
+				border-color: $color_gopro_white;
+				font-weight: bold;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro_blood;
+		}
+	}
+	&.success {
+		background-color: $color_gopro_finishline;
+		p {
+			color: $color_gopro_white;
+			text-align: left;
+			a {
+				color: $color_gopro_white;
+				border-color: $color_gopro_white;
+				font-weight: bold;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro_finishline;
+		}
+	}
+	&.warning {
+		background-color: $color_gopro_hardhat;
+		p {
+			color: $color_gopro_white;
+			text-align: left;
+			a {
+				color: $color_gopro_white;
+				border-color: $color_gopro_white;
+				font-weight: bold;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro_hardhat;
+		}
+	}
+	&.gopro {
+		background-color: $color_gopro;
+		p {
+			color: $color_gopro_white;
+			text-align: left;
+			a {
+				color: $color_gopro_white;
+				border-color: $color_gopro_white;
+				font-weight: bold;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro;
+		}
+	}
+	&.white {
+		background-color: $color_gopro_white;
+		p {
+			color: $color_gopro_black;
+			text-align: left;
+			text-transform: uppercase;
+			a {
+				color: $color_gopro_black;
+				border: none;
+				font-weight: bold;
+				background-color: transparent;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro_white;
+		}
+	}
+	&.cookie {
+		background-color: $color_gopro_silver;
+		p {
+			color: $color_gopro_tire;
+			text-align: left;
+			a {
+				color: $color_gopro;
+				border: none;
+				font-weight: bold;
+				background-color: transparent;
+			}
+		}
+		&>.arrow {
+			background-color: $color_gopro_white;
+		}
+	}
+
+	//Auto disappear, auto off
+	&.auto-off {
+		@include keyframe(autoOff) {
+			100% { opacity: 0; max-height: 0em; padding: 0em; font-size: 0em; }
+		}
+		//By default, disappear after 5s
+		@include animation(autoOff,5s,0.8s,1);
+
+		//Disappear after 2s
+		&.fast {
+			@include animation(autoOff,2s,0.8s,1);
+		}
+
+		//Disappear after 15s
+		&.slow {
+			@include animation(autoOff,15s,0.8s,1);
+		}
+	}
+}
+@include screen-xs {
+	.notification-bar {
+		padding: 1.1em;
+	}
+}
+
+/* Errors */
+div.error {
+	padding: 2em;
+	text-align: center;
+	background-color: $color_gopro_white;
+	max-width: 50em;
+	margin: auto;
+	h1, h2, h3, h4, h5, h6 {
+		font-size: $font_size_xxxlarge;
+		margin-top: 0;
+		margin-bottom: 0em;
+		text-transform: uppercase;
+	}
+	p {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: $font_size_base;
+		margin-bottom: 2em;
+	}
+}
+@include screen-xs {
+	div.error {
+		font-size: 0.7em;
+	}
+}
+
+/* Separators */
+div.separator {
+	&>div {
+		&.text {
+			color: $color_gopro_concrete;
+			font-size: $font_size_base;
+			font-family: $font_family_text_2;
+			letter-spacing: 0.1em;
+		}
+		&>hr {
+			border-top: 2px solid $color_gopro_concrete;
+		}
+	}
+	&.slider {
+		&>div {
+			&.text {
+				font-size: $font_size_xxsmall;
+			}
+			&>hr {
+				border-top: 2px solid $color_gopro_white;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+
+/* Spinner */
+.spinner {
+	position: relative;
+	.circle {
+		@include border-radius(100%);
+		position: absolute;
+		border-bottom-color: transparent;
+		border-width: 1em; /*SEE CALC*/
+		border-style: solid;
+		@include keyframe(GoProSpinner) {
+			0% {
+				@include transform(rotate(0deg));
+			}
+			100% {
+				@include transform(rotate(360deg));
+			}
+		}
+		&.blue {
+			width: 60%;
+			height: 60%;
+			margin-left: -30%;
+			margin-top: -30%;
+			top: 50%;
+			left: 50%;
+			border-top-color: $color_gopro;
+			border-left-color: $color_gopro;
+			border-right-color: $color_gopro;
+			@include animation(GoProSpinner, 0s, 1s, infinite);
+			-webkit-animation-timing-function: linear;
+    		animation-timing-function: linear;
+			animation-direction:reverse;
+		}
+		&.grey {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-top-color: $color_spinner_grey;
+			border-left-color: $color_spinner_grey;
+			border-right-color: $color_spinner_grey;
+			@include animation(GoProSpinner, 0s, 1s, infinite);
+			-webkit-animation-timing-function: linear;
+    		animation-timing-function: linear;
+		}
+	}
+	&.large {
+		width: 5em;
+		height: 5em;
+		.circle {
+			border-width: 0.5em;
+		}
+	}
+	&.std {
+		width: 3em;
+		height: 3em;
+		.circle {
+			border-width: 0.35em;
+		}
+	}
+	&.small {
+		width: 1.5em;
+		height: 1.5em;
+		.circle {
+			border-width: 0.17em;
+		}
+	}
+	&.responsive {
+		width: 100%;
+		padding-bottom: 100%;
+		.circle {
+			border-width: calc(100vw*0.08);
+		}
+	}
+}
+
+/**
+* Dragula
+* Drag n drop feature
+*/
+.sortable-list  {
+	min-height: 2em;
+	&.source {
+		border: 3px dashed $color_gopro_silver;
+	}
+	&.target {
+		border: 3px dashed $color_gopro_finishline;
+	}
+	&>li, &>div, &>p {
+		cursor: pointer;
+		&>span {
+			font-size: $font_size_xsmall;
+		}
+	}
+}
+.gu-mirror {
+	font-size: $font_size_xsmall;
+}

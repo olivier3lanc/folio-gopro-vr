@@ -1,0 +1,67 @@
+/* Navigation bar */
+header {
+	@include transition(top 0.3s ease-in-out, background-color 0.3s);
+	top: -3em;
+	background-color: transparent;
+}
+header.opened {
+	top: 0em;
+	background-color: $color_gopro_black;
+}
+nav .logo {
+	max-height: $font_size_large;
+}
+nav>ul {
+	list-style: none;
+	padding: 0em;
+}
+nav>ul>li {
+	display: block;
+	height: 4em;
+	line-height: 0em;
+}
+nav>ul>li>div {
+	display: table;
+	text-align: center;
+	height: 100%;
+}
+nav>ul>li>div>a {
+	display: table-cell;
+	vertical-align: middle;
+}
+nav .profile-image {
+	height: $font_size_large;
+}
+nav>ul>li>span.separator {
+	background-color: $color_medium_grey;
+	display: block;
+	width: 1px;
+	height: 1em;
+	position: relative;
+	top: 1.5em;
+	margin: 0 2em 0 2em;
+
+}
+nav>ul>li>div>.btn-group {
+	display: table-cell;
+	vertical-align: middle;
+}
+nav>ul>li.user>.btn-group>button>span {
+	color: $color_medium_grey;
+	font-size: $font_size_small;
+}
+nav>ul>li>div>.btn-group>.dropdown-menu {
+	@include border-radius(0em);
+	border: none;
+}
+nav>ul>li>div>.btn-group>.dropdown-menu>li>a {
+	font-size: $font_size_small;
+}
+nav>ul>li>div>.btn-group>.btn-default,
+nav>ul>li>div>.btn-group.open>.btn-default,
+nav>ul>li>div>.btn-group.open>.btn-default:hover,
+nav>ul>li>div>.btn-group>.btn-default:focus,
+nav>ul>li>div>.btn-group.open>.btn-default:focus {
+	background-color: transparent;
+	border: none
+}

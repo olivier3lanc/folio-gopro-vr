@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>User</title>
+
+		<!-- Bootstrap CSS 3.3.5 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/marketing.css" rel="stylesheet">
+		<!-- <link href="css/layout.css" rel="stylesheet">
+		<link href="css/fonts.css" rel="stylesheet"> -->
+
+		<link href="css/main.css" rel="stylesheet">
+
+		<link href="css/bootstrap-tagsinput.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="js/head.min.js"></script>
+	</head>
+	<body>
+		<!-- Custom GoPro nav -->
+		<div id="gpl-js-layout">
+			<nav id="marketing-nav">
+				<div id="gpl-marketing-main-nav" class="gpl-grid">
+					<div class="gpl-col-2 gpl-logo">
+						<div class="gpl-marketing-logo">
+							<a href="#">
+								<img alt="GoPro" src="images/GoPro_Logo_VR_Reversed_rev2.svg">
+							</a>
+						</div>
+					</div>
+					<div class="gpl-col-6">
+						<div class="gpl-marketing-main-links">
+							<ul>
+								<!-- <li>
+									<a id="gpl-products-link" href="#">
+										Shop
+									</a>
+								</li> -->
+								<li>
+									<a id="gpl-channel-link" href="browse.html" class="gpl-main-nav-link active">
+										Explore
+									</a>
+								</li>
+								<li>
+									<a id="gpl-support-link" href="create.html" class="gpl-main-nav-link">
+										Create
+									</a>
+								</li>
+								<li>
+									<a id="gpl-search-link" href="search-results.html" class="gpl-main-nav-link">
+										Search
+									</a>
+								</li>
+								<!-- <li>
+									<span class="gpl-toggle-click" data-target="gpl-search-box"><i class="gpl-icon-search"></i></span>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+
+					<div class="gpl-col-4">
+
+						<div class="gpl-marketing-nav-details">
+
+							<div class="gpl-marketing-login">
+								<!-- <span class="icon-loop animate"></span> -->
+							</div>
+
+							<div class="gpl-marketing-login gpl-log-in">
+								<a href="log-in.html" class="gpl-button">Sign In</a>
+							</div>
+
+
+							<!-- <div class="gpl-marketing-login gpl-log-out">
+
+								<span class="gpl-toggle-click" data-target="gpl-account-info-box">
+									<p>User name</p>
+									<p>
+										<span class="avatar" style="background-image:url(images/thumbs/gopro-image-1.jpg)"></span>
+									</p>
+								</span>
+							</div> -->
+
+						</div>
+
+					</div>
+				</div>
+
+
+				<!-- Flashes  -->
+				<div id="gpl-flashes" class="gpl-show">
+					<div class="gpl-flash-warning"></div>
+				</div>
+
+
+				<!-- Account Info -->
+				<div id="gpl-account-info-wrapper">
+					<div id="gpl-account-info-box" class="gpl-detail-box">
+						<!-- <div class="gpl-grid gpl-account-info-header">
+							<h5>Account</h5>
+							<span data-target="gpl-account-info-box" class="gpl-js-close"><i class="gpl-icon-close"></i></span>
+						</div> -->
+						<div class="gpl-grid gpl-account-info-body">
+							<a href="user.html">My Media</a>
+							<a href="upload">Upload</a>
+							<a href="#">Settings</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- mobile nav -->
+				<div id="gpl-marketing-nav-mobile">
+					<div class="gpl-mobile-logo">
+						<a href="https://gopro.com/">
+							<img alt="GoPro" src="images/GoPro_Logo_VR_Reversed_rev2.svg">
+						</a>
+					</div>
+
+					<!-- mobile nav shopping cart -->
+					<div class="gpl-mobile-nav-actions">
+						<!--  Hamburger button -->
+						<span class="gpl-toggle-click" data-target="gpl-mobile-sub-nav-box">
+							<i class="gpl-icon-hamburger"></i>
+						</span>
+
+						<div id="signin-mobile-container">
+							<!--  Log In Button -->
+							<div class="gpl-mobile-log-in gp-log-in">
+
+								<a href="log-in.html" class="gpl-button none">
+									<img alt="Login" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjAuMSAoNzU5NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+MTAwIC0gaVBhZCBTcG90bGlnaHQ8L3RpdGxlPgogICAgPGRlc2NyaXB0aW9uPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjcmlwdGlvbj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPgogICAgICAgIDxnIGlkPSIxMDAtLS1pUGFkLVNwb3RsaWdodCIgc2tldGNoOnR5cGU9Ik1TQXJ0Ym9hcmRHcm91cCI+CiAgICAgICAgICAgIDxnIGlkPSJPdmFsLTYtKy1PdmFsLTQtKy1PdmFsLTUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTUwLDEwMCBDNzcuNjE0MjM3NSwxMDAgMTAwLDc3LjYxNDIzNzUgMTAwLDUwIEMxMDAsMjIuMzg1NzYyNSA3Ny42MTQyMzc1LDAgNTAsMCBDMjIuMzg1NzYyNSwwIDAsMjIuMzg1NzYyNSAwLDUwIEMwLDc3LjYxNDIzNzUgMjIuMzg1NzYyNSwxMDAgNTAsMTAwIFoiIGlkPSJPdmFsLTYiIGZpbGw9IiNGRkZGRkYiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04OS41MTQzMTM5LDgwLjY0MDcwMzkgQzgwLjM2Njk4ODksOTIuNDIwMDQxOSA2Ni4wNjg2OTE1LDEwMCA1MCwxMDAgQzM0LjAwNDA5MzUsMTAwIDE5Ljc2MjU3OSw5Mi40ODg1NTQ5IDEwLjYxMDMwNDQsODAuODAwNTEyNyBDMTUuMTkzNDIyOSw3Mi41NjY1NjIgMjMuOTkyMDkzNCw2Ni45NjQyODU3IDM0LjAzNTcxNDMsNjYuOTY0Mjg1NyBMNjYuMTc4NTcxNCw2Ni45NjQyODU3IEM3Ni4xNTcwNzk4LDY2Ljk2NDI4NTcgODQuOTA2NzI3NSw3Mi40OTQxNTg2IDg5LjUxNDMxMzksODAuNjQwNzAzOSBaIiBpZD0iT3ZhbC00IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNTAuMTA3MTQyOSw1OC45Mjg1NzE0IEM2My40MjExNTAyLDU4LjkyODU3MTQgNzQuMjE0Mjg1Nyw0OC4xMzU0MzU5IDc0LjIxNDI4NTcsMzQuODIxNDI4NiBDNzQuMjE0Mjg1NywyMS41MDc0MjEyIDYzLjQyMTE1MDIsMTAuNzE0Mjg1NyA1MC4xMDcxNDI5LDEwLjcxNDI4NTcgQzM2Ljc5MzEzNTUsMTAuNzE0Mjg1NyAyNiwyMS41MDc0MjEyIDI2LDM0LjgyMTQyODYgQzI2LDQ4LjEzNTQzNTkgMzYuNzkzMTM1NSw1OC45Mjg1NzE0IDUwLjEwNzE0MjksNTguOTI4NTcxNCBaIiBpZD0iT3ZhbC01IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=">
+								</a>
+							</div>
+
+							<!--  Account Button / Log out button-->
+							<div class="gpl-mobile-log-in gp-log-out gpl-toggle-click  mgright0" data-target="gpl-account-info-box">
+								<span class="icon-loop animate"></span>
+								<span class="avatar" style="background-image:url(images/thumbs/gopro-image-1.jpg)"></span>
+							</div>
+						</div>
+
+						<!--  Search Button -->
+						<span class="gpl-toggle-click" data-target="gpl-search-box">
+							<i class="gpl-icon-search"></i>
+						</span>
+
+					</div>
+
+					<!-- Mobile Sub Nav -->
+					<div id="gpl-mobile-sub-nav-box" class="gpl-detail-box">
+						<ul>
+							<li class="sub-nav-item">
+								<label for="gpl-mobile-sub-nav">Shop<i class="gpl-icon-arrow-right"></i>
+									<input type="checkbox" id="gpl-mobile-sub-nav">
+									<ul class="sub-nav-products">
+										<li>
+											<a class="products-image" href="https://shop.gopro.com/EMEA/">
+												Shop Home<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+										<li>
+											<a class="cameras-image" href="https://shop.gopro.com/EMEA/cameras">
+												Cameras<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+										<li>
+											<a class="mounts-image" href="https://shop.gopro.com/EMEA/mounts-accessories">
+												Mounts + Accessories<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+										<li>
+											<a class="software-image" href="https://shop.gopro.com/EMEA/softwareandapp">
+												Software + App<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+										<li>
+											<a class="activity-image" href="https://shop.gopro.com/EMEA/shopbyactivity">
+												Shop By Activity<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+										<li>
+											<a class="pro-image" href="https://gopro.com/professional">
+												Professional<i class="gpl-icon-arrow-right"></i>
+											</a>
+										</li>
+									</ul>
+								</label>
+							</li>
+							<li class="sub-nav-item">
+								<a href="https://gopro.com/channel/">
+									Explore <i class="gpl-icon-arrow-right"></i>
+								</a>
+							</li>
+							<li class="sub-nav-item">
+								<a href="https://gopro.com/help">
+									Create <i class="gpl-icon-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+
+
+		<div class="section profile-header">
+
+			<div class="overlay"></div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p class="pic" style="background-image: url(images/profile-pic1.jpg)">
+							<img src="images/profile-pic1.jpg" alt="pic">
+						</p>
+						<h1 class="mgtop0dot5 mgbot0dot3">username logged</h1>
+						<p class="text mgbot1dot0">UX Designer - Strange Food Lover</p>
+						<!-- <p class="text"><a href="#" title="Website" class="link-profile">www.smbddr.com</a></p> -->
+						<div class="shrunk-container">
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<p class="likes text text-right">950 <span>likes</span></p>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 text-left">
+									<p class="views text">50 240 <span>views</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="row mgtop2dot0">
+							<div class="col-md-12 text-center">
+								<button class="btn btn-std btn-stroke-light">Edit profile</button><a href="upload.html" class="btn btn-std btn-primary">upload</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal"><span class="icon-pencil"></span></button> -->
+		</div>
+
+
+
+
+
+		<div class="section wall">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="hoverable force-hover featured">
+						<div class="overlay" style="background-image: url(images/gopro-image-15.jpg)"></div>
+						<a href="video.html" class="link-overlay"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<p class="pre-text">highlighted</p>
+									<h3><a href="#" class="link-wall-cell" title="This is a very very very very très long Title">my best 360  video name my best 360  video name my best 360  video name my best 360  video name</a></h3>
+									<p><a href="#" class="btn btn-play btn-std"><span class="icon-play_arrow"></span></a></p>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">260 views - 6 likes - 5 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable disabled">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+
+
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-1.jpg)"></div>
+						<a href="video.html" class="link-overlay"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell">This is a very very very very très long Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">260 views - 6 likes - 5 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay"></div>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3 class="font-size-xxxlarge-responsive">Soon</h3>
+									<p class="text">The upload of your video is processing. You'll recieve an email when your video is ready.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay"></div>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3 class="font-size-xxxlarge-responsive">Oops...</h3>
+									<p class="text">The upload of your video [video_title] has failed. Please retry to upload your video.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-2.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="short Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="Short Title">short Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">2 600 005 views - 1626 likes - 15 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-3.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="short Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="Short Title">short Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">600 005 views - 166 likes - 15 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-4.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="short Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="Short Title">short Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">600 005 views - 166 likes - 15 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-5.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="This is a very very very very très long Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="This is a very very very very très long Title">This is a very very very very très long Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">260 views - 6 likes - 5 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-6.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="short Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="Short Title">short Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">2 600 005 views - 1626 likes - 15 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="hoverable force-hover">
+						<div class="overlay" style="background-image: url(images/gopro-image-7.jpg)"></div>
+						<a href="video.html" class="link-overlay" title="short Title"></a>
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<h3><a href="#" class="link-wall-cell" title="Short Title">short Title</a></h3>
+								</div>
+							</div>
+						</div>
+						<p class="statistics">600 005 views - 166 likes - 15 comments</p>
+                        <button class="btn btn-edit downloadable">
+                            <span class="icon-download"></span>
+                        </button>
+						<nav class="menublock">
+							<input type="checkbox">
+							<button class="btn btn-edit menu">
+								<span class="icon-three-bars"></span>
+								<span class="icon-exit"></span>
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-edit editable" data-toggle="modal" data-target="#edit-modal">
+									<span class="icon-pencil"></span>
+								</button><br>
+								<button class="btn btn-edit hilightable">
+									<span class="icon-hilight-tag"></span>
+								</button><br>
+								<button class="btn btn-edit awardable" data-toggle="modal" data-target="#awards-modal">
+									<span class="icon-awards-notext"></span>
+								</button><br>
+								<button class="btn btn-edit deletable">
+									<span class="icon-delete"></span>
+								</button>
+							</div>
+						</nav>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div class="centered-content">
+							<div class="table">
+								<div class="cell">
+									<p class="text"><a href="#" title="More videos" class="link-filter font-size-xlarge">Back to home</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section pre-footer pdtop0dot5 pdbot0dot5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<p class="text mgbot0"><a href="#" class="link-pre-footer-neutral"><span class="icon-gopro-vr"></span></a></p>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<p class="text text-right mgbot0"><a href="#" class="link-pre-footer">FAQ <i class="gpl-icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="gpl-footer">
+		    <div class="gpl-grid">
+		        <div class="gpl-col-12">
+		            <div class="gpl-col-md-4 gpl-col-12 gpl-col-sm-6 gpl-footer-info-section">
+		                <h3>Join the GoPro movement</h3>
+
+		                <hr>
+
+		                <p>I want to receive the latest GoPro videos, news, tutorials, software updates, special deals and giveaways.</p>
+
+		                <form>
+		                    <input name="email" id="gpl-js-join-email" type="email" placeholder="Enter your email">
+
+		                    <button type="submit" value="Submit" id="gpl-js-join-submit">
+		                        Submit
+		                        <i class="gpl-icon-chevron-right"></i>
+		                    </button>
+		                </form>
+
+		                <div id="gpl-js-join-success">
+		                    Thank you for signing up for the GoPro newsletter.
+		                </div>
+
+		                <div id="gpl-js-join-error">
+		                    There was a problem submitting your email. Please try again.
+		                </div>
+		            </div>
+
+		            <div class="gpl-col-md-4 gpl-col-12 gpl-col-sm-6 gpl-footer-info-section">
+		                <h3>Camera Software Updates</h3>
+
+		                <hr>
+
+		                <p>Keep your GoPro up to date for the latest features and best performance.</p>
+
+		                <a href="https://gopro.com/update">
+		                    <span>
+		            Download Update
+		            <i class="gpl-icon-chevron-right"></i>
+		          </span>
+		                </a>
+		            </div>
+
+		            <div class="gpl-col-md-4 gpl-col-12 gpl-col-sm-6 gpl-footer-info-section">
+		                <h3>Customer Support</h3>
+
+		                <hr>
+
+		                <p>Visit the support page for help, and find answers to commonly asked questions.</p>
+
+		                <a href="https://gopro.com/help">
+		                    <span>
+		            Visit Support
+		            <i class="gpl-icon-chevron-right"></i>
+		          </span>
+		                </a>
+		            </div>
+		        </div>
+		    </div>
+
+		    <div style="margin:20px 0px;"></div>
+
+		    <div class="gpl-grid">
+		        <div class="gpl-col-12 gpl-footer-social">
+		            <a href="http://www.facebook.com/gopro" target="_blank">
+		                <img alt="Facebook" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAqCAMAAACeN6kpAAAAolBMVEVMaXHMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxjPgN6AAAANXRSTlMAPKpV74ctpbTSMrv6EEriwhwnAVqd9kQK5uuYBdeRjG4iNmIUZ8w//cdesYJNfN1zeKFRV/4dAzMAAAPeSURBVHhe7Zdrk7I4EIUbiSgIclOuiojg/crI//9rO9LEQAbWqpnad6d2PV9kDmnyQDgdBv5Xeuutt96a7Q+6U3xqDD+QOXZ/UOx2zW3KBer7dOJ0R4piAN/SKTQ+i4fQKntX/JhuWJZ/k25QFnfQjYvfTBf9arpRedK5nVw3/X106/JkDqjfRoeJ7f9TdG86z0oUKwWmmakklsbT2aYiSGazUlIUy+Pa/1JRpPQ1HSFki6kgn3IhIqX0y2jh2lDJiqp+TXbR8mFo17VaGnoo1ejkAyl/g9wC1HIxL52tfHwye5nhlKafC1/oDuShoKovGlIwwJVknNk+Ij9rOkLA/t72baRryBmXlWe1ZmVQStALpp7XpJug3Yc2uhSXmUpPH1PkzEC6RG04fUbHFGgAsGh6cQnnNDxjVqfT8LYvXhudChB8mTgrODp73nS2CaNjWgFsOEu1AGYXzjzX6aboudBGd4FZs1QHsHWeblydCxcGHg3a6HKAA+9FAHfe82eMbkNLqURRxOkPn0cueGKpbEFwoAYJHow2pmZap+s0gQjhtOe9+pSOREJqnrHAAK8Kzkdqrggd2MPHfV6mmx0O3DzpPFyUIH3ZUT6wVIIY5/X4nS8EeN6sxvodyy8otWXK6Hs9Z08nxTcwftIdcdAeXtItcaRQvdm79vESjlo26LBCpm+AVxtoAT7ErH4hSiepuEr2azqT0uHiGY3xvKQGXR/paHeAGp0E+Dtpo8OVdpbQTSeEa588ROkGf4qu6jQ36KSzw4Lqz9Ixid101+LfozN8jLjXSad/pQs76HKFyWtNxb2NTu1+77hdjKejUTiIrjuhdPgk1sCEPTjq/ILKMeU0s2X3Smi4cS+6wkPYXY6UzjbojtJCx65h1TO7whITqKoUz2cddJqPt0if14qtduGBzLqGtMXzlA5oS+mgs/AaJ/aPmkA9/bwX9/FieBnDHp31dSLes3hxmE8pneFu3KzahY9gY+7V6D7J0ZMBqtiNVuI5oKtN6SBCR2yn8xCehKFcUDpY8/usRhpGxz4rIAm/4294TwZGp3HB4FIxbJljs+Xo4PaSDmNkOk3P11qmODG6xuedtL8LHJ2w/UoHMU9n5y/p/LLjn9S6R5KHlza/v45Qp6sFYxXfVhwd7On1SO9JBye9SQf2lfwtnTqoQpTsmDmy0NNCxqxPoEFXC8YqjsuTi95DE6y1wnkQrPO7p40ekkpzdop2uuMEcq//oeEU+1z2HZX48mGxtwAs8TY15j5xyGXdu9YCLhxHsq/Lw7PCPDPrrS/B3Ig+MPdxCXCrHfcsSOJsA/9RvfUXgg25Ay9gH0oAAAAASUVORK5CYII="
+		                    style="width: 130px; height: 32px; transform: translate(0px,-6px);">
+		            </a>
+		            <a href="http://www.youtube.com/GoProCamera" target="_blank">
+		                <img alt="Youtube" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAvCAMAAADjJNVlAAAAkFBMVEVMaXHMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyG4kWwAAAAL3RSTlMAPLThHVrxpZaHRO4t0g/Mu/fdqmkVCcczeFXAmksF/TeMI9coAmHroX+vj25A5ft8SpIAAANRSURBVHhezZhpl6owDIajMIwoUASBQRYR3Lf+/393mzZ4BnXGAY6e+35J2tQ+tUuAQheti5m5TFPfd13GPM+bSE15raksbz2vYpE79P00NfebEjorP2m8i6KsI1BnvKt2eRdgeeHdlYTtgaHN+yhtT9zzfjq3BYaTnkQXYC5UAEpHV/+dOOdC44aMmy5F1eln4kKHRBgbUDHWPDk1I2wDDd0QPwFgwH/WXHIWDggNhVfB73J7E2Ow0MizuRXO8gkx6k00ATQCrf6yleTZ+BKSs1+i15I4UksTAcBGWONZUtA4aYilT+m2ImI8w4UMAXbC+vBERm/iECDEnD8GqITZPCPyTsStrS1qP6E9uocA/2oAQlmaRIeZmt9SnK6VsGdhQwDnAdEVEoO+CGNfiYdzOXbrMWAHQYzTQydxJskZLWcQqUgl94aJa02zqQPoD4i0vNjqoyaesHKtkPW8WQrpgepmmmPfsWiGQBVyOhNp/33xxnlTmUgDUCs4QJKl0hhpf0+0/kYE5xxStYHjDq0caMNwAwNL7F4UNepEGxeU+zoS9QuPKEMNEaVxhsXkSjzXh5OSyklNyLQzcYCtMa4makz5encl5rSNMkoqH7Rg98TB34mWip+oelA/BhaA8jlqGr6AOGsSqT1sqJMXETPGmNUkBgt0Z68hkhpEegiVbyEulL9E33lOtPoTDeWbLyUOfCXvPUSqvmrSjlj2J2rtiHr/8+i1Izr9iXY7IrQmxsLMqZhi8+SWmKhUsPqWyVPsiojGY6LHjeIbsRA2UPGjMCt6Iz7QD5vEHQ4jh6MwHgW0TJSIqD0mbnYlfCNCXI3onTtCa7IYzYVjvEmkf7OVMfxRzElEtO+JDpCIePOuuQISJazRLTGvOGmKbefKTw0iRvfEAlDB7BtRDxWCGpISjjJviWBtudRigyVHlo7rmujeEmnQpd3YOYmOXFuNNgdUPqq/O6QyUyhUvj4SlOmwUKUiqfwBwF7EHbnBSQYTmsihmcXYNHgUxzGOYCLqK24cjp/1LvPirMhMj0pzeKQgWP/4/dhX+tu/kf//ewAI2bvvOvBdtLvcbldIfe6s3nsvxzLorHVxMo/pzj+4CbMbV48ko758ZMx18e5xaW7qdPcPPxbeYw8jQfAAAAAASUVORK5CYII="
+		                    style="width: 100px; height: 40px;">
+		            </a>
+		            <a href="http://twitter.com/gopro" target="_blank">
+		                <img alt="Twitter" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAArCAQAAACd8WMuAAACf0lEQVR4AbXVXUhUQRiA4c+jlEJhZpGGIaKXBmRFfxQghd2VIAQRJWQZBRUQQXZTUYBUCClYGVSCVBSStEQh5CnIbl4Q804jJAWsVCvTZVN3gpbD5tm/md2z570cPh5mmMNIah/LOUYXwwQIMMxz6liGRJSNCMlncYYJlKtxzmIhOJXxkL1h6Dplhkwur1Axek0uQg41vGCBASwHWsMcQ6w2YJbwARWnfmz8KBRBKhEHqkeh6GOVNnQPpdlVJAzdR/1rgCItZoc2c4MMstlPfWjQdhYYYaMGZGshCzzlAj5+84X80GAfygk/JxIwpSijfrDeOboe15KPkjhQvREzzS7Egdoilme5RE4MqMWA+cY2JAwdQUVpjAZWRoE6tJlBipH/oTxmUVH7RRu7yVwEtWtDXchiSGiOO/CdB9RSThaC0KgN+SKhfMY0Bv8wxFs+akMdkZBQSQDlca1u6BbbyaAav8dQgxsaQDHKM954DB1wQ49QaanCDdWlhQmw1A3lM50G6D3ihoSmNEBXokF5jHoObYgGCVuY8ZT5jESHhJ189RC6HBsSCugk6Akzx1o35K6C24ylDD1GYkPZvKMbm6GUd7VAeTxIaEV5UjsSHyrgpwfMDMWJIOGgB5fhPJIYEi6mSPWSqQcJh1M4wAmKEV1IKOIOs+YM81QiupDTCmq4Rq8BE6QWMYcEi1P4DZjTSDLQZqPdzHMUMYUsqvChDJqiCjGBCthHCyMoo2xKkMTQHl7STQ/9TKGMm+YcFqIDCYU0E0jqKWilENFLCLWORsaNfsyblOoikc9ENU+YTHhYnRwiBzFLcJfJJk5yF5tPTBIkdKsG6aaJ42wlC0mmv7TpEhI16ikoAAAAAElFTkSuQmCC"
+		                    style="width: 45px; height: 40px;">
+		            </a>
+		            <a href="http://instagram.com/GoPro" target="_blank">
+		                <img alt="Instagram" src="data:image/png;base64,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"
+		                    style="width: 120px; height: 40px;">
+		            </a>
+		            <a href="http://www.pinterest.com/GoPro" target="_blank">
+		                <img alt="Pinterest" src="data:image/png;base64,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"
+		                    style="width: 42px; height: 42px;">
+		            </a>
+		            <p class="gpl-footer-marketing-promo-tag">
+		                <b>30 Day</b> Money Back Guarantee
+		            </p>
+		            <hr class="gpl-social-hr">
+		        </div>
+		        <div class="gpl-col-12 gpl-link-list-section-marketing">
+		            <a href="https://gopro.com/about-us">
+		        About Us
+		      </a>
+		            <a href="https://gopro.com/news">
+		        News
+		      </a>
+		            <a href="https://gopro.com/careers">
+		        Careers
+		      </a>
+		            <a href="http://gopro.orderingstore.com" target="_blank">
+		        Get Stickers
+		      </a>
+		            <a href="https://gopro.com/international-distributors">
+		        International Distributors
+		      </a>
+		            <a href="https://gopro.com/authorized-reseller-program">
+		        Become a Dealer
+		      </a>
+		            <a href="https://gopro.com/affiliate-program">
+		        Affiliate Program
+		      </a>
+		            <a href="https://gopro.com/terms">
+		        Terms
+		      </a>
+		            <a href="https://gopro.com/privacy-policy">
+		        Privacy Policy
+		      </a>
+		            <a href="https://gopro.com/store-locator">
+		        Shop Local
+		      </a>
+		            <a href="https://gopro.com/connect">
+		        Contact Us
+		      </a>
+		            <a href="https://shop.gopro.com/EMEA//cameras/refurbished-hero3plus-black-edition/CHDNH-B07.html">
+		        Refurbished Cameras
+		      </a>
+		            <a href="https://gopro.com/order-status">
+		        Order Status
+		      </a>
+		            <a href="http://investor.gopro.com">
+		        Investor Relations
+		      </a>
+		            <a href="https://gopro.com/casupplychaindisclosure">
+		        Supply Chain
+		      </a>
+		            <br>
+		            <br>
+		        </div>
+		        <div class="gpl-col-sm-12 gpl-copyright-section">
+		            <p>© 2016 GoPro, Inc. All Rights Reserved. Patented USA. USA and International patents pending.</p>
+		        </div>
+
+		    </div>
+		</footer>
+
+
+		<!-- Edit modal -->
+		<div class="modal fade" id="edit-modal" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="row">
+						<div class="col-sm-12 mgbot2dot0">
+							<button class="btn btn-close btn-std" data-dismiss="modal"><span class="icon-close"></span></button>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<p class="tabs" data-target="#edit-and-thumbnail">
+									<a href="#" class="link-tab active mgright1dot0" data-target="#tab-1">Edit your video</a>
+									<a href="#" class="link-tab" data-target="#tab-2">Edit your thumbnail</a>
+								</p>
+								<hr>
+							</div>
+						</div>
+						<!-- tabs -->
+						<div class="row" id="edit-and-thumbnail">
+							<div class="col-md-12" id="tab-1">
+								<div class="row">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Title of your story</p>
+									</div>
+									<div class="col-md-9">
+										<div class="form-group form-minimal">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="Title of the video" value="Title of the video">
+
+												<div class="input-group-addon none" data-toggle="tooltip" data-placement="top" title="Title is required."><span class="icon-warning"></span></div>
+											</div>
+											<div class="notification-bar danger">
+												<p>Danger! Looks like your password wasn't long enough. Please make sur it's at least 8 characters.</p>
+												<button><span class="icon-close"></span></button>
+												<span class="arrow top"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row mgbot1dot0">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Video description</p>
+									</div>
+									<div class="col-md-9">
+										<textarea class="form-minimal form-control" rows="5">Slackline between two Hot Air Balloon with Julien Millot from the Flying Frenchies. http://www.flying-frenchies.com/</textarea>
+									</div>
+								</div>
+								<div class="row mgbot1dot0">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Tags</p>
+										<p class="text-help">Hit 'Enter' key or 'comma'</p>
+									</div>
+									<div class="col-md-9">
+										<input type="text" class="form-control" value="nature,ski" data-role="tagsinput">
+									</div>
+								</div>
+								<div class="row mgbot1dot0">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Activity</p>
+									</div>
+									<div class="col-md-9">
+										<div class="row">
+											<div class="col-sm-12 col-md-6">
+												<select id="video_category" name="video_category" data-style-class="stroke-dark" data-text="Category">
+													<option></option>
+													<option value="1">Architecture</option>
+													<option value="2">Art</option>
+													<option value="3">Daily life</option>
+													<option value="4">Educational</option>
+													<option value="5">Entertainment</option>
+													<option value="6">Experimental</option>
+													<option value="7">Fashion</option>
+													<option value="8" selected="selected">Flying</option>
+													<option value="9">Gaming</option>
+													<option value="10">Landscape</option>
+													<option value="11">Motor sport</option>
+													<option value="12">Music</option>
+													<option value="13">Nature</option>
+													<option value="14">Sport</option>
+													<option value="15">Street</option>
+													<option value="16">Underwater</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<p class="text-help mgtop0dot8">Help text</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row mgbot2dot0">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Privacy</p>
+									</div>
+									<div class="col-md-9">
+										<div class="row">
+											<div class="col-sm-12 col-md-6">
+												<select id="video_privacy" name="video_edit2]" data-style-class="stroke-dark" data-text="Privacy">
+													<option></option>
+													<option value="1">Public</option>
+													<option value="2">Unlisted</option>
+													<option value="4" selected="selected">Private</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<p class="text-help mgtop0dot8">Help text</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row passwords" style="display:none">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Password</p>
+									</div>
+									<div class="col-md-9">
+										<div class="row">
+											<div class="col-sm-12 col-md-6">
+												<div class="form-group form-minimal">
+													<div class="input-group">
+														<input type="password" class="form-control" placeholder="">
+														<div class="input-group-addon none" data-toggle="tooltip" data-placement="top" title="Title is required."><span class="icon-warning"></span></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<p class="text-help mgtop0dot8">Enter password</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row passwords mgbot2dot0" style="display:none">
+									<div class="col-md-3">
+										<p class="text-label mgtop0dot8">Confirm password</p>
+									</div>
+									<div class="col-md-9">
+										<div class="row">
+											<div class="col-sm-12 col-md-6">
+												<div class="form-group form-minimal">
+													<div class="input-group">
+														<input type="password" class="form-control" placeholder="">
+														<div class="input-group-addon none" data-toggle="tooltip" data-placement="top" title="Title is required."><span class="icon-warning"></span></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<p class="text-help mgtop0dot8">Confirm password</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row mgbot2dot0">
+									<div class="col-xs-10 col-sm-9 col-md-3">
+										<p class="text-label">Highlight this video</p>
+									</div>
+									<div class="col-xs-2 col-sm-3 col-md-9">
+										<div class="form-checkbox checkbox-clear pull-right-xs pull-right-sm">
+											<!-- Take care to match input 'id' and the label 'for' attribute
+											Remember to place the JS code for the toggle -->
+											<input type="checkbox" value="" id="check1">
+											<label for="check1"><span></span></label>
+										</div>
+									</div>
+								</div>
+							</div><!-- ./tab-1 -->
+							<div class="col-md-12 text-center none" id="tab-2">
+								<p class="mgbot2dot0"><img src="images/thumbnail-choose.png" class="img-responsive"></p>
+								<p class="text mgbot3dot0">Customize your thumbnail by choosing the best moment of the video.</p>
+							</div><!-- ./tab-2 -->
+						</div><!-- ./tabs -->
+
+
+						<div class="row">
+							<div class="col-md-4 text-left">
+								<p class="mgtop1dot5"><a href="#" class="link-default font-size-base">Delete this video</a></p>
+							</div>
+							<div class="col-md-8 text-right">
+								<button type="button" class="btn btn-std btn-no-stroke" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-std btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div class="modal fade in" id="awards-modal">
+		    <div class="modal-dialog">
+				<div class="modal-content dark text-center">
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-close btn-std" data-dismiss="modal">
+								<span class="icon-close"></span>
+							</button>
+						</div>
+					</div>
+
+					<p class="mgbot3dot0"><img src="images/AwardsLogo_white.svg" alt="GoPro Awards" style="max-width: 25em"></p>
+
+					<h2 class="uppercase mgbot1dot0 font-family-text bold">We're celebrating content creators like you daily</h2>
+					<p class="text mgbot2dot0">Submit your best photos, raw clips and video edits captured with GoPro Omni. We'll be granting cash awards for our favorites in each category.</p>
+
+					<form action="/video/5182495f43828cd166802bfd49bfdbbc/awards/submitted" method="post" role="form" id="awards-modal-form">
+						<div class="row">
+							<div class="col-sm-4 col-md-4">
+								<div class="form-group">
+									<div class="form-checkbox checkbox-default">
+										<input type="checkbox" required="required" value="1" id="gopro_awards_terms">
+										<label for="gopro_awards_terms"><span> I accept the <a href="https://gopro.com/awards/terms" target="_blank">terms</a></span></label>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-8 col-md-8 text-right">
+								<button type="button" class="btn btn-default btn-xs btn-stroke-white" data-dismiss="modal" tabindex="11">
+									Cancel
+								</button>
+								<button type="submit" class="btn btn-primary btn-xs" id="awards_submit" tabindex="10">
+									Submit
+								</button>
+								<button type="button" class="btn btn-md btn-pending hide">
+									<span class="spinner inline-block small">
+										<span class="circle grey"></span>
+										<span class="circle blue"></span>
+									</span>
+								</button>
+
+								<input id="gopro_awards__token" name="gopro_awards[_token]" value="65IkEpw6ysL_uCWtUqSR9ANQHEFqiJSIpXCbwxh9TEo" type="hidden">
+							</div>
+						</div>
+					</form>
+		        </div>
+			</div>
+		</div>
+
+		<div class="section sumo">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="input-group search-form">
+							<input type="text" class="form-control" value="enter your query">
+							<span class="input-group-btn">
+								<button class="btn" type="button"><span class="icon-search"></span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery 2.1.4 -->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<!-- Bootstrap 3.3.5 -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<script src="js/bootstrap-tagsinput.min.js"></script>
+
+		<script src="js/isInViewport.min.js"></script>
+
+		<script src="js/functions.js"></script>
+		<script src="js/fn_user.js"></script>
+		<!-- <script src="js/parallax.js"></script> -->
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				// jQuery('#awards-modal').modal('show');
+			})
+		</script>
+
+		<!-- DEV MENU -->
+		<div id="temp-nav-iframe"><iframe src="temp-nav.html"></iframe></div>
+		<!-- ./DEV MENU -->
+	</body>
+</html>

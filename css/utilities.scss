@@ -1,0 +1,669 @@
+/* Utilities */
+.font-family-text                          { font-family: $font_family_text !important; }
+.font-family-text-2                        { font-family: $font_family_text_2 !important; }
+.font-family-text-3                        { font-family: $font_family_text_3 !important; }
+.font-family-headline                      { font-family: $font_family_headline !important; }
+
+.font-size-xxxxsmall                       { font-size: $font_size_xxxxsmall !important; }
+.font-size-xxxsmall                        { font-size: $font_size_xxxsmall !important; }
+.font-size-xxsmall                         { font-size: $font_size_xxsmall !important; }
+.font-size-xsmall                          { font-size: $font_size_xsmall !important; }
+.font-size-small                           { font-size: $font_size_small !important; }
+.font-size-base                            { font-size: $font_size_base !important; }
+.font-size-large                           { font-size: $font_size_large !important; }
+.font-size-xlarge                          { font-size: $font_size_xlarge !important; }
+.font-size-xxlarge                         { font-size: $font_size_xxlarge !important; }
+.font-size-xxxlarge                        { font-size: $font_size_xxxlarge !important; }
+.font-size-xxxxlarge                       { font-size: $font_size_xxxxlarge !important; }
+
+.color-gopro-black                         { color: $color_gopro_black !important; }
+.color-gopro-tire                          { color: $color_gopro_tire !important; }
+.color-medium-grey                         { color: $color_medium_grey !important; }
+.color-gopro-concrete                      { color: $color_gopro_concrete !important; }
+.color-gopro-silver                        { color: $color_gopro_silver !important; }
+.color-gopro-glacier                       { color: $color_gopro_glacier !important; }
+.color-gopro-snow                          { color: $color_gopro_snow !important; }
+.color-medium-white                        { color: $color_gopro_white !important; }
+
+.color-gopro                               { color: $color_gopro !important; }
+.color-gopro-pacific                       { color: $color_gopro_pacific !important; }
+.color-gopro-atlantic                      { color: $color_gopro_atlantic !important; }
+.color-gopro-hardhat                       { color: $color_gopro_hardhat !important; }
+.color-gopro-finishline                    { color: $color_gopro_finishline !important; }
+.color-gopro-blood                         { color: $color_gopro_blood !important; }
+
+.color-gopro-black                         { color: $color_gopro_black !important; }
+.color-gopro-asphalt                       { color: $color_gopro_asphalt !important; }
+.color-gopro-gridtape                      { color: $color_gopro_gridtape !important; }
+.color-gopro-tire                          { color: $color_gopro_tire !important; }
+.color-gopro-gunmetal                      { color: $color_gopro_gunmetal !important; }
+.color-gopro-concrete                      { color: $color_gopro_concrete !important; }
+.color-gopro-silver                        { color: $color_gopro_silver !important; }
+.color-gopro-glacier                       { color: $color_gopro_glacier !important; }
+.color-gopro-snow                          { color: $color_gopro_snow !important; }
+.color-gopro-white                         { color: $color_gopro_white !important; }
+
+.color-gopro-facebook                      { color: $color_gopro_facebook !important; }
+.color-gopro-google                        { color: $color_gopro_google !important; }
+
+.color-medium-grey                         { color: $color_medium_grey !important; }
+
+.uppercase                                 { text-transform: uppercase !important; }
+.bold                                      { font-weight: bold !important; }
+
+.none                                      { display: none !important; }
+.inline                                    { display: inline !important; }
+.inline-block                              { display: inline-block !important; }
+.block                                     { display: block !important; }
+
+
+//Apply on XS
+@include screen-xs {
+    .text-left-xs                          { text-align: left !important; }
+    .text-center-xs                        { text-align: center !important; }
+    .text-justify-xs                       { text-align: justify !important; }
+	.text-right-xs                         { text-align: right !important; }
+
+    .font-size-xxxxsmall-responsive        { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxxsmall-responsive         { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxsmall-responsive          { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xsmall-responsive           { font-size: $font_size_xxxxsmall !important; }
+    .font-size-small-responsive            { font-size: $font_size_xxxsmall !important; }
+    .font-size-base-responsive             { font-size: $font_size_xxsmall !important; }
+    .font-size-large-responsive            { font-size: $font_size_xsmall !important; }
+    .font-size-xlarge-responsive           { font-size: $font_size_small !important; }
+    .font-size-xxlarge-responsive          { font-size: $font_size_base !important; }
+    .font-size-xxxlarge-responsive         { font-size: $font_size_large !important; }
+    .font-size-xxxxlarge-responsive        { font-size: $font_size_xlarge !important; }
+    .font-size-one-word-title              { font-size: $font_size_xxlarge !important; }
+
+    .pull-left-xs                          { float: left !important; }
+    .pull-right-xs                         { float: right !important; }
+
+    .mgbot1dot0-xs                         { margin-bottom: 1.0em !important; }
+    .mgbot2dot0-xs                         { margin-bottom: 2.0em !important; }
+}
+//Apply on SM
+@include screen-sm {
+    .text-left-sm                          { text-align: left !important; }
+    .text-center-sm                        { text-align: center !important; }
+    .text-justify-sm                       { text-align: justify !important; }
+	.text-right-sm                         { text-align: right !important; }
+
+    .font-size-xxxxsmall-responsive        { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxxsmall-responsive         { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxsmall-responsive          { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xsmall-responsive           { font-size: $font_size_xxxsmall !important; }
+    .font-size-small-responsive            { font-size: $font_size_xxsmall !important; }
+    .font-size-base-responsive             { font-size: $font_size_xsmall !important; }
+    .font-size-large-responsive            { font-size: $font_size_small !important; }
+    .font-size-xlarge-responsive           { font-size: $font_size_base !important; }
+    .font-size-xxlarge-responsive          { font-size: $font_size_large !important; }
+    .font-size-xxxlarge-responsive         { font-size: $font_size_xlarge !important; }
+    .font-size-xxxxlarge-responsive        { font-size: $font_size_xxlarge !important; }
+    .font-size-one-word-title              { font-size: $font_size_xxxlarge !important; }
+
+    .pull-left-sm                          { float: left !important; }
+    .pull-right-sm                         { float: right !important; }
+
+    .mgbot2dot0-sm                         { margin-bottom: 2.0em !important; }
+}
+//Apply on MD
+@include screen-md {
+    .text-left-md                          { text-align: left !important; }
+    .text-center-md                        { text-align: center !important; }
+    .text-justify-md                       { text-align: justify !important; }
+	.text-right-md                         { text-align: right !important; }
+
+    .font-size-xxxxsmall-responsive        { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxxsmall-responsive         { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxsmall-responsive          { font-size: $font_size_xxxsmall !important; }
+    .font-size-xsmall-responsive           { font-size: $font_size_xxsmall !important; }
+    .font-size-small-responsive            { font-size: $font_size_xsmall !important; }
+    .font-size-base-responsive             { font-size: $font_size_small !important; }
+    .font-size-large-responsive            { font-size: $font_size_base !important; }
+    .font-size-xlarge-responsive           { font-size: $font_size_large !important; }
+    .font-size-xxlarge-responsive          { font-size: $font_size_xlarge !important; }
+    .font-size-xxxlarge-responsive         { font-size: $font_size_xxlarge !important; }
+    .font-size-xxxxlarge-responsive        { font-size: $font_size_xxxlarge !important; }
+    .font-size-one-word-title              { font-size: $font_size_xxxxlarge !important; }
+
+    .pull-left-md                          { float: left !important; }
+    .pull-right-md                         { float: right !important; }
+}
+//Apply on LG
+@include screen-lg {
+    .text-left-lg                          { text-align: left !important; }
+    .text-center-lg                        { text-align: center !important; }
+    .text-justify-lg                       { text-align: justify !important; }
+	.text-right-lg                         { text-align: right !important; }
+
+    .font-size-xxxxsmall-responsive        { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxxsmall-responsive         { font-size: $font_size_xxxsmall !important; }
+    .font-size-xxsmall-responsive          { font-size: $font_size_xxsmall !important; }
+    .font-size-xsmall-responsive           { font-size: $font_size_xsmall !important; }
+    .font-size-small-responsive            { font-size: $font_size_small !important; }
+    .font-size-base-responsive             { font-size: $font_size_base !important; }
+    .font-size-large-responsive            { font-size: $font_size_large !important; }
+    .font-size-xlarge-responsive           { font-size: $font_size_xlarge !important; }
+    .font-size-xxlarge-responsive          { font-size: $font_size_xxlarge !important; }
+    .font-size-xxxlarge-responsive         { font-size: $font_size_xxxlarge !important; }
+    .font-size-xxxxlarge-responsive        { font-size: $font_size_xxxxlarge !important; }
+    .font-size-one-word-title              { font-size: $font_size_xxxxlarge !important; }
+
+    .pull-left-lg                          { float: left !important; }
+    .pull-right-lg                         { float: right !important; }
+}
+//Apply on XL
+@include screen-xl {
+    .text-left-xl                          { text-align: left !important; }
+    .text-center-xl                        { text-align: center !important; }
+    .text-justify-xl                       { text-align: justify !important; }
+	.text-right-xl                         { text-align: right !important; }
+
+    .font-size-xxxxsmall-responsive        { font-size: $font_size_xxxxsmall !important; }
+    .font-size-xxxsmall-responsive         { font-size: $font_size_xxxsmall !important; }
+    .font-size-xxsmall-responsive          { font-size: $font_size_xxsmall !important; }
+    .font-size-xsmall-responsive           { font-size: $font_size_xsmall !important; }
+    .font-size-small-responsive            { font-size: $font_size_small !important; }
+    .font-size-base-responsive             { font-size: $font_size_base !important; }
+    .font-size-large-responsive            { font-size: $font_size_large !important; }
+    .font-size-xlarge-responsive           { font-size: $font_size_xlarge !important; }
+    .font-size-xxlarge-responsive          { font-size: $font_size_xxlarge !important; }
+    .font-size-xxxlarge-responsive         { font-size: $font_size_xxxlarge !important; }
+    .font-size-xxxxlarge-responsive        { font-size: $font_size_xxxxlarge !important; }
+    .font-size-one-word-title              { font-size: $font_size_xxxxlarge !important; }
+
+    .pull-left-xl                          { float: left !important; }
+    .pull-right-xl                         { float: right !important; }
+}
+
+.pd0                                       { padding: 0em !important; }
+.pd2dot0                                   { padding: 2em !important; }
+.mg0                                       { margin: 0em !important; }
+.mgauto                                    { margin: auto !important; }
+
+.pdtop0                                    { padding-top: 0em !important; }
+.pdtop0dot1                                { padding-top: 0.1em !important; }
+.pdtop0dot3                                { padding-top: 0.3em !important; }
+.pdtop0dot5                                { padding-top: 0.5em !important; }
+.pdtop0dot8                                { padding-top: 0.8em !important; }
+.pdtop1dot0                                { padding-top: 1.0em !important; }
+.pdtop1dot5                                { padding-top: 1.5em !important; }
+.pdtop2dot0                                { padding-top: 2.0em !important; }
+.pdtop4dot0                                { padding-top: 4.0em !important; }
+.pdtop6dot0                                { padding-top: 6.0em !important; }
+.pdtop10dot0                               { padding-top: 10.0em !important; }
+.pdtop35vh                                 { padding-top: 35vh !important; }
+
+.pdleft0                                   { padding-left: 0em !important; }
+.pdleft0dot1                               { padding-left: 0.1em !important; }
+.pdleft0dot3                               { padding-left: 0.3em !important; }
+.pdleft0dot5                               { padding-left: 0.5em !important; }
+.pdleft0dot8                               { padding-left: 0.8em !important; }
+.pdleft1dot0                               { padding-left: 1.0em !important; }
+.pdleft1dot5                               { padding-left: 1.5em !important; }
+.pdleft2dot0                               { padding-left: 2.0em !important; }
+
+.pdbot0                                    { padding-bottom: 0em !important; }
+.pdbot0dot1                                { padding-bottom: 0.1em !important; }
+.pdbot0dot3                                { padding-bottom: 0.3em !important; }
+.pdbot0dot5                                { padding-bottom: 0.5em !important; }
+.pdbot0dot8                                { padding-bottom: 0.8em !important; }
+.pdbot1dot0                                { padding-bottom: 1.0em !important; }
+.pdbot1dot5                                { padding-bottom: 1.5em !important; }
+.pdbot2dot0                                { padding-bottom: 2.0em !important; }
+.pdbot10dot0                               { padding-bottom: 10.0em !important; }
+.pdbot35vh                                 { padding-bottom: 35vh !important; }
+.pdbot40vh                                 { padding-bottom: 40vh !important; }
+
+.pdright0                                  { padding-right: 0em !important; }
+.pdright0dot1                              { padding-right: 0.1em !important; }
+.pdright0dot3                              { padding-right: 0.3em !important; }
+.pdright0dot5                              { padding-right: 0.5em !important; }
+.pdright0dot8                              { padding-right: 0.8em !important; }
+.pdright1dot0                              { padding-right: 1.0em !important; }
+.pdright1dot5                              { padding-right: 1.5em !important; }
+.pdright2dot0                              { padding-right: 2.0em !important; }
+
+.mgtop0                                    { margin-top: 0em !important; }
+.mgtop0dot1                                { margin-top: 0.1em !important; }
+.mgtop0dot3                                { margin-top: 0.3em !important; }
+.mgtop0dot5                                { margin-top: 0.5em !important; }
+.mgtop0dot8                                { margin-top: 0.8em !important; }
+.mgtop1dot0                                { margin-top: 1.0em !important; }
+.mgtop1dot5                                { margin-top: 1.5em !important; }
+.mgtop2dot0                                { margin-top: 2.0em !important; }
+.mgtop3dot0                                { margin-top: 3.0em !important; }
+.mgtop4dot0                                { margin-top: 4.0em !important; }
+.mgtop5dot0                                { margin-top: 5.0em !important; }
+.mgtop10dot0                               { margin-top: 10.0em !important; }
+
+.mgright0                                  { margin-right: 0em !important; }
+.mgright0dot1                              { margin-right: 0.1em !important; }
+.mgright0dot3                              { margin-right: 0.3em !important; }
+.mgright0dot5                              { margin-right: 0.5em !important; }
+.mgright0dot8                              { margin-right: 0.8em !important; }
+.mgright1dot0                              { margin-right: 1.0em !important; }
+.mgright1dot5                              { margin-right: 1.5em !important; }
+.mgright2dot0                              { margin-right: 2.0em !important; }
+.mgright3dot0                              { margin-right: 3.0em !important; }
+.mgright4dot0                              { margin-right: 4.0em !important; }
+.mgright5dot0                              { margin-right: 5.0em !important; }
+.mgright10dot0                             { margin-right: 10.0em !important; }
+
+.mgbot0                                    { margin-bottom: 0em !important; }
+.mgbot0dot1                                { margin-bottom: 0.1em !important; }
+.mgbot0dot3                                { margin-bottom: 0.3em !important; }
+.mgbot0dot5                                { margin-bottom: 0.5em !important; }
+.mgbot0dot8                                { margin-bottom: 0.8em !important; }
+.mgbot1dot0                                { margin-bottom: 1.0em !important; }
+.mgbot1dot5                                { margin-bottom: 1.5em !important; }
+.mgbot2dot0                                { margin-bottom: 2.0em !important; }
+.mgbot3dot0                                { margin-bottom: 3.0em !important; }
+.mgbot4dot0                                { margin-bottom: 4.0em !important; }
+.mgbot5dot0                                { margin-bottom: 5.0em !important; }
+.mgbot10dot0                               { margin-bottom: 10.0em !important; }
+
+.mgleft0                                   { margin-left: 0em !important; }
+.mgleft0dot1                               { margin-left: 0.1em !important; }
+.mgleft0dot3                               { margin-left: 0.3em !important; }
+.mgleft0dot5                               { margin-left: 0.5em !important; }
+.mgleft0dot8                               { margin-left: 0.8em !important; }
+.mgleft1dot0                               { margin-left: 1.0em !important; }
+.mgleft1dot5                               { margin-left: 1.5em !important; }
+.mgleft2dot0                               { margin-left: 2.0em !important; }
+.mgleft3dot0                               { margin-left: 3.0em !important; }
+.mgleft4dot0                               { margin-left: 4.0em !important; }
+.mgleft5dot0                               { margin-left: 5.0em !important; }
+.mgleft10dot0                              { margin-left: 10.0em !important; }
+
+.clearfix                                  { clear: both }
+
+
+/**
+* Responsiveness
+*/
+//Highlighted video
+html {
+    &.landscape.no-desktop {
+        .section {
+            &.wall {
+                .hoverable {
+                    @include screen-xs {
+                        &.featured {
+                            height: 100vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.ie {
+        .section {
+            &.sumo {
+                &>.overlay {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+    &.edge {
+        .section {
+            /* Blurred section */
+        	&.blur {
+        		filter: none;
+        		-webkit-filter: none;
+        	}
+            &.sumo {
+                &>.overlay {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        body {
+            /* Modal */
+        	&.modal-open {
+        		.section {
+        			@include filter(none);
+        		}
+        	}
+            .modal-backdrop.in {
+            	background-color: $color_gopro_black;
+            	opacity: 0.9;
+            }
+        }
+    }
+
+}
+
+/**
+Fixes
+*/
+
+body {
+    &.full_height {
+        height: 100%;
+    }
+}
+
+.section {
+    .gopro_raw_text {
+        height: 70vh;
+        overflow: auto;
+        padding-right: 2em;
+        h1 {
+            font-size: $font_size_xxxlarge;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        @include screen-xs {
+            h1, h2 {
+                font-size: $font_size_xxlarge;
+            }
+        }
+        p, ul {
+            font-size: $font_size_xsmall;
+            text-align: justify;
+            color: $color_gopro_snow;
+            a {
+                color: $color_gopro_pacific;
+            }
+        }
+
+    }
+}
+
+
+//Player overload
+#KolorEyesVideo {
+    width: 100%;
+    height: 600px;
+}
+// @import 'iframe_and_player.scss';
+
+//GoPro Header
+.section {
+    &.wall {
+        &.gpl-header-fit {
+            padding-top: 75px;
+        }
+        @media (max-width: 1024px) {
+            &.gpl-header-fit {
+                padding-top: 55px;
+            }
+        }
+    }
+}
+
+
+#marketing-nav {
+    #gpl-marketing-main-nav {
+        background-color: rgba(0,0,0,0.6);
+        @include transition(background-color 0.3s);
+        &.scrolled {
+            background-color: rgba(0,0,0,1);
+        }
+    }
+    .gpl-logo {
+        .gpl-marketing-logo {
+            height: 45px;
+            margin: 0px 0px 0px 15px;
+            img {
+                bottom: 8px;
+                max-width: 170px;
+            }
+        }
+    }
+    #gpl-mobile-sub-nav-box {
+        overflow: auto;
+        ul {
+            li {
+                &.sub-nav-item {
+                    label, a {
+                        font-family: $font_family_text_3;
+                    }
+                }
+            }
+        }
+    }
+    .gpl-marketing-login {
+        a, p {
+            font-family: $font_family_text_3;
+        }
+
+    }
+    .gpl-marketing-main-links {
+        font-size: 18px;
+        letter-spacing: 2px;
+        ul {
+            bottom: 20px;
+            padding-left: 75px;
+            li {
+                margin: 0px;
+                padding-left: 55px;
+                padding-right: 55px;
+                border-right: 1px solid #4a4a4a;
+                &:last-child {
+                    padding-left: 55px;
+                    padding-right: 0px;
+                    border-right: none;
+                }
+                a {
+                    font-family: $font_family_headline;
+                    color: $color_medium_grey;
+                    outline: none;
+                    &.active {
+                        color: $color_gopro;
+                        &:after {
+                            border: none;
+                        }
+                    }
+                    &:focus {
+                        color: $color_gopro_white;
+                    }
+                    &#gpl-omni-link {
+                        max-width: none;
+                        &>span {
+                            letter-spacing: 0px
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gpl-marketing-nav-details {
+        margin: 15px 10px 0px 0px;
+    }
+    #gpl-account-info-wrapper {
+        #gpl-account-info-box {
+            padding: 1em;
+            @include transition(background-color 0.3s);
+            background-color: rgba(53,53,53,0.9);
+            text-align: center;
+            .gpl-account-info-body {
+                background-color: transparent;
+                border: none;
+                a {
+                    color: $color_gopro_silver;
+        			font-family: $font_family_headline;
+        			text-transform: uppercase;
+        			text-decoration: none;
+        			font-size: $font_size_xsmall;
+        			letter-spacing: .2em;
+                    border-color: $color_gopro_gunmetal;
+                    @include transition(color 0.3s);
+                    &:hover {
+                        color: $color_gopro_snow;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .gpl-mobile-nav-actions {
+        &>div,&>span {
+            float: right;
+        }
+    }
+    span {
+        &.animate {
+            font-size: $font_size_base;
+            display: inline-block;
+            color: $color_gopro_snow;
+            @include keyframe(rotatingLoop) {
+                0%      { @include transform(rotate(0deg)) }
+                100%    { @include transform(rotate(360deg)) }
+            }
+            @include animation(rotatingLoop, 0s, 1s, infinite);
+        }
+        &.avatar {
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include border-radius(60px);
+        }
+    }
+    @media (max-width: 1024px) {
+        #gpl-marketing-nav-mobile {
+            .gpl-mobile-logo {
+                img {
+                    max-width: 170px;
+                }
+            }
+        }
+        #gpl-account-info-wrapper {
+            #gpl-account-info-box {
+                .gpl-account-info-body {
+                    a {
+                        color: $color_gopro_snow;
+                    }
+                }
+            }
+        }
+        span {
+            &.avatar {
+                top: 0px;
+            }
+        }
+    }
+    #gpl-flashes {
+        display: none;
+        z-index: 1000;
+        &.gpl-show {
+            display: block;
+            top: 75px;
+        }
+        @media (max-width: 1024px) {
+            &.gpl-show {
+                top: 55px;
+            }
+        }
+    }
+
+    //When scroll
+    &.scrolled {
+        #gpl-marketing-main-nav {
+            background-color: rgba(0,0,0,1);
+        }
+        #gpl-account-info-wrapper {
+            #gpl-account-info-box {
+                background-color: rgba(53,53,53,1);
+            }
+        }
+    }
+
+    //Bypass opacity on account dropdown menu on small
+    @media (max-width: 1024px) {
+        #gpl-account-info-wrapper {
+            #gpl-account-info-box {
+                background-color: rgba(53,53,53,1);
+            }
+        }
+    }
+}
+
+//GoPro Footer
+footer#gpl-footer {
+    position: inherit;
+    .gpl-footer-info-section {
+        h3 {
+            font-size: $font_size_small;
+        }
+        p {
+            font-size: $font_size_xxsmall;
+        }
+    }
+    .gpl-footer-info-section {
+        form {
+            input[type="email"] {
+                padding: 0.8em;
+                line-height: 1em;
+                color: $color_gopro_black;
+                // font-size: $font_size_xxxsmall;
+            }
+        }
+    }
+    .gpl-footer-info-section {
+        #gpl-js-join-success, #gpl-js-join-warning {
+            color: $color_gopro_white;
+        }
+    }
+}
+
+
+
+
+
+//Temporary menu for dev
+#temp-nav-iframe:before {
+    font-family: 'icomoon';
+    content: "\e813";
+    position: fixed;
+    top: 0;
+    left: 10px;
+    line-height: 0.8em;
+    font-size: 70px;
+    opacity: 0.5;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 2px black;
+}
+#temp-nav-iframe:hover:before {
+    opacity: 0
+}
+#temp-nav-iframe {
+    position: fixed;
+    top: 0px;
+    left: -400px;
+    height: 100%;
+    padding: 0em;
+    z-index: 999;
+    @include transition(left 0.3s);
+    background-color: rgba(10,10,10,0.8);
+}
+#temp-nav-iframe iframe {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+}
+#temp-nav-iframe:hover {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 1em;
+}

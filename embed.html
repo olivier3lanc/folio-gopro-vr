@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Video</title>
+
+		<!-- Bootstrap CSS 3.3.5 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/marketing.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+
+		<link href="css/KolorEyesGoPro.css" rel="stylesheet">
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="js/head.min.js"></script>
+	</head>
+	<body>
+
+		<!-- Custom GoPro nav -->
+		<div id="gpl-js-layout">
+		    <nav id="marketing-nav">
+		        <div id="gpl-marketing-main-nav" class="gpl-grid">
+		            <div class="gpl-col-2 gpl-logo">
+		                <div class="gpl-marketing-logo">
+		                    <a href="index.html">
+		                        <img alt="GoPro" src="images/GoPro_Logo_VR_Reversed_rev2.svg">
+		                    </a>
+		                </div>
+		            </div>
+		            <div class="gpl-col-6">
+		                <div class="gpl-marketing-main-links">
+		                    <ul>
+		                        <!-- <li>
+		                            <a id="gpl-products-link" href="#">
+						                Shop
+						            </a>
+		                        </li> -->
+		                        <li>
+		                            <a id="gpl-channel-link" href="browse.html" class="gpl-main-nav-link">
+						              	Explore
+						            </a>
+		                        </li>
+		                        <li>
+		                            <a id="gpl-support-link" href="create.html" class="gpl-main-nav-link">
+						                Create
+						            </a>
+		                        </li>
+								<li>
+		                            <a id="gpl-search-link" href="search-results.html" class="gpl-main-nav-link">
+						                Search
+						            </a>
+		                        </li>
+		                        <!-- <li>
+		                            <span class="gpl-toggle-click" data-target="gpl-search-box"><i class="gpl-icon-search"></i></span>
+		                        </li> -->
+		                    </ul>
+		                </div>
+		            </div>
+
+		            <div class="gpl-col-4">
+
+		                <div class="gpl-marketing-nav-details">
+
+							<div class="gpl-marketing-login">
+								<!-- <span class="icon-loop animate"></span> -->
+								<div class="spinner small">
+									<div class="circle grey"></div>
+									<div class="circle blue"></div>
+								</div>
+							</div>
+
+							<div class="gpl-marketing-login gpl-log-in">
+				                <a href="log-in.html" class="gpl-button">Sign In</a>
+				            </div>
+
+
+		                    <div class="gpl-marketing-login gpl-log-out">
+
+		                        <span class="gpl-toggle-click" data-target="gpl-account-info-box">
+					                <p>User name</p>
+									<p>
+										<!-- <i class="gpl-icon-triangle-down"></i> -->
+										<span class="avatar" style="background-image:url(images/thumbs/gopro-image-1.jpg)"></span>
+						            </p>
+								</span>
+							</div>
+
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Flashes  -->
+		        <div id="gpl-flashes" class="gpl-show">
+					<div class="notification-bar gopro">
+						<p>We encourage you to install our application <a href="intent://scan/#Intent;scheme=koloreyes360videoplayer;package=fi.finwe.koloreyesandroid;S.fi.finwe.koloreyesandroid.EXTRA_MESSAGE=https://10.129.43.229/streams/b7fbc44e-9f3a-4d38-abd3-e5ba56b2bf4c/source.03-1080p_HD.mp4;end">
+							<!-- <img src="images/favicons/favicon.svg" alt="GoPro VR App"> -->
+							<span class="icon-gopro-vr-app pdright0dot5"></span>
+							GoPro VR App</a> to browse and play the videos</p>
+						<button><span class="icon-close"></span></button>
+					</div>
+		        </div>
+
+
+		        <!-- Account Info -->
+		        <div id="gpl-account-info-wrapper">
+		            <div id="gpl-account-info-box" class="gpl-detail-box">
+		                <!-- <div class="gpl-grid gpl-account-info-header">
+		                    <h5>Account</h5>
+		                    <span data-target="gpl-account-info-box" class="gpl-js-close"><i class="gpl-icon-close"></i></span>
+		                </div> -->
+		                <div class="gpl-grid gpl-account-info-body">
+		                    <a href="user.html">My Media</a>
+		                    <a href="upload">Upload</a>
+		                    <a href="#">Settings</a>
+		                </div>
+		            </div>
+		        </div>
+
+		        <!-- mobile nav -->
+		        <div id="gpl-marketing-nav-mobile">
+		            <div class="gpl-mobile-logo">
+		                <a href="https://gopro.com/">
+		                    <img alt="GoPro" src="images/GoPro_Logo_VR_Reversed_rev2.svg">
+		                </a>
+		            </div>
+
+		            <!-- mobile nav shopping cart -->
+		            <div class="gpl-mobile-nav-actions">
+						<!--  Hamburger button -->
+		                <span class="gpl-toggle-click" data-target="gpl-mobile-sub-nav-box">
+							<i class="gpl-icon-hamburger"></i>
+						</span>
+
+						<div id="signin-mobile-container">
+			                <!--  Log In Button -->
+							<div class="gpl-mobile-log-in gp-log-in">
+
+								<a href="log-in.html" class="gpl-button none">
+									<img alt="Login" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjAuMSAoNzU5NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+MTAwIC0gaVBhZCBTcG90bGlnaHQ8L3RpdGxlPgogICAgPGRlc2NyaXB0aW9uPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjcmlwdGlvbj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPgogICAgICAgIDxnIGlkPSIxMDAtLS1pUGFkLVNwb3RsaWdodCIgc2tldGNoOnR5cGU9Ik1TQXJ0Ym9hcmRHcm91cCI+CiAgICAgICAgICAgIDxnIGlkPSJPdmFsLTYtKy1PdmFsLTQtKy1PdmFsLTUiIHNrZXRjaDp0eXBlPSJNU0xheWVyR3JvdXAiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTUwLDEwMCBDNzcuNjE0MjM3NSwxMDAgMTAwLDc3LjYxNDIzNzUgMTAwLDUwIEMxMDAsMjIuMzg1NzYyNSA3Ny42MTQyMzc1LDAgNTAsMCBDMjIuMzg1NzYyNSwwIDAsMjIuMzg1NzYyNSAwLDUwIEMwLDc3LjYxNDIzNzUgMjIuMzg1NzYyNSwxMDAgNTAsMTAwIFoiIGlkPSJPdmFsLTYiIGZpbGw9IiNGRkZGRkYiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04OS41MTQzMTM5LDgwLjY0MDcwMzkgQzgwLjM2Njk4ODksOTIuNDIwMDQxOSA2Ni4wNjg2OTE1LDEwMCA1MCwxMDAgQzM0LjAwNDA5MzUsMTAwIDE5Ljc2MjU3OSw5Mi40ODg1NTQ5IDEwLjYxMDMwNDQsODAuODAwNTEyNyBDMTUuMTkzNDIyOSw3Mi41NjY1NjIgMjMuOTkyMDkzNCw2Ni45NjQyODU3IDM0LjAzNTcxNDMsNjYuOTY0Mjg1NyBMNjYuMTc4NTcxNCw2Ni45NjQyODU3IEM3Ni4xNTcwNzk4LDY2Ljk2NDI4NTcgODQuOTA2NzI3NSw3Mi40OTQxNTg2IDg5LjUxNDMxMzksODAuNjQwNzAzOSBaIiBpZD0iT3ZhbC00IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNTAuMTA3MTQyOSw1OC45Mjg1NzE0IEM2My40MjExNTAyLDU4LjkyODU3MTQgNzQuMjE0Mjg1Nyw0OC4xMzU0MzU5IDc0LjIxNDI4NTcsMzQuODIxNDI4NiBDNzQuMjE0Mjg1NywyMS41MDc0MjEyIDYzLjQyMTE1MDIsMTAuNzE0Mjg1NyA1MC4xMDcxNDI5LDEwLjcxNDI4NTcgQzM2Ljc5MzEzNTUsMTAuNzE0Mjg1NyAyNiwyMS41MDc0MjEyIDI2LDM0LjgyMTQyODYgQzI2LDQ4LjEzNTQzNTkgMzYuNzkzMTM1NSw1OC45Mjg1NzE0IDUwLjEwNzE0MjksNTguOTI4NTcxNCBaIiBpZD0iT3ZhbC01IiBmaWxsPSIjMDA5RkRGIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=">
+								</a>
+							</div>
+
+							<!--  Account Button / Log out button-->
+							<div class="gpl-mobile-log-in gp-log-out gpl-toggle-click  mgright0" data-target="gpl-account-info-box">
+								<span class="icon-loop animate"></span>
+								<span class="avatar" style="background-image:url(images/thumbs/gopro-image-1.jpg)"></span>
+							</div>
+						</div>
+
+		                <!--  Search Button -->
+		                <span class="gpl-toggle-click" data-target="gpl-search-box">
+							<i class="gpl-icon-search"></i>
+						</span>
+
+		            </div>
+
+		            <!-- Mobile Sub Nav -->
+		            <div id="gpl-mobile-sub-nav-box" class="gpl-detail-box">
+		                <ul>
+		                    <li class="sub-nav-item">
+		                        <label for="gpl-mobile-sub-nav">Shop<i class="gpl-icon-arrow-right"></i>
+		                            <input type="checkbox" id="gpl-mobile-sub-nav">
+		                            <ul class="sub-nav-products">
+		                                <li>
+		                                    <a class="products-image" href="https://shop.gopro.com/EMEA/">
+							                    Shop Home<i class="gpl-icon-arrow-right"></i>
+							                </a>
+		                                </li>
+		                                <li>
+		                                    <a class="cameras-image" href="https://shop.gopro.com/EMEA/cameras">
+							                    Cameras<i class="gpl-icon-arrow-right"></i>
+							                </a>
+		                                </li>
+		                                <li>
+		                                    <a class="mounts-image" href="https://shop.gopro.com/EMEA/mounts-accessories">
+												Mounts + Accessories<i class="gpl-icon-arrow-right"></i>
+											</a>
+		                                </li>
+		                                <li>
+		                                    <a class="software-image" href="https://shop.gopro.com/EMEA/softwareandapp">
+												Software + App<i class="gpl-icon-arrow-right"></i>
+											</a>
+		                                </li>
+		                                <li>
+		                                    <a class="activity-image" href="https://shop.gopro.com/EMEA/shopbyactivity">
+												Shop By Activity<i class="gpl-icon-arrow-right"></i>
+											</a>
+		                                </li>
+		                                <li>
+		                                    <a class="pro-image" href="https://gopro.com/professional">
+												Professional<i class="gpl-icon-arrow-right"></i>
+											</a>
+		                                </li>
+		                            </ul>
+		                        </label>
+		                    </li>
+		                    <li class="sub-nav-item">
+		                        <a href="https://gopro.com/channel/">
+									Explore <i class="gpl-icon-arrow-right"></i>
+								</a>
+		                    </li>
+		                    <li class="sub-nav-item">
+		                        <a href="https://gopro.com/help">
+									Create <i class="gpl-icon-arrow-right"></i>
+								</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		    </nav>
+		</div>
+
+
+		<div class="section dark pdtop10dot0 pdbot10dot0">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<iframe src="http://vr.staging.gopro.com/video/i/734ad1329f7322c38f6b69c46cffdd23" type="text/html" width="800" height="450" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="section gridtape">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="font-family-text-2 bold uppercase font-size-xlarge color-gopro-snow">Join the GoPro movement</p>
+					</div>
+					<div class="col-md-6">
+						<div class="input-group subscribe">
+							<input type="text" class="form-control" placeholder="Enter Your Email">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">Submit</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="section dark">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4 col-md-4">
+							<h5>360° hardware</h5>
+							<p class="text mgtop2dot0 mgbot2dot0">An entire place dedicated to your spherical production</p>
+							<p class="text"><a href="#" class="link-large">Enter now</a></p>
+							<hr class="invisible hidden-lg hidden-md">
+						</div>
+						<div class="col-sm-4 col-md-4">
+							<h5>360° software</h5>
+							<p class="text mgtop2dot0 mgbot2dot0">Get the best from your GoPro and go to 360°!</p>
+							<p class="text"><a href="#" class="link-large">Discover it</a></p>
+							<hr class="invisible hidden-lg hidden-md">
+						</div>
+						<div class="col-sm-4 col-md-4">
+							<h5>Customer support</h5>
+							<p class="text mgtop2dot0 mgbot2dot0">Visit the support page for help and find answers to commonly asked questions.</p>
+							<p class="text"><a href="#" class="link-large">Visit support</a></p>
+							<hr class="invisible hidden-lg hidden-md">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<hr>
+							<p>
+								<a href="" class="link-social" title="Facebook"><span class="icon-facebook2"></span></a>
+								<a href="" class="link-social" title="YouTube channel"><span class="icon-youtube"></span></a>
+								<a href="" class="link-social" title="Twitter"><span class="icon-twitter2"></span></a>
+								<a href="" class="link-social" title="Instagram"><span class="icon-instagram"></span></a>
+								<a href="" class="link-social" title="Pinterest"><span class="icon-pinterest"></span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section gridtape">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p class="mgbot2dot0">
+								<a href="#" title="" class="link-soft-dark">About us</a> /
+								<a href="#" title="" class="link-soft-dark">News</a> /
+								<a href="#" title="" class="link-soft-dark">Careers</a> /
+								<a href="#" title="" class="link-soft-dark">International Distributors</a> /
+								<a href="#" title="" class="link-soft-dark">Become a Dealer</a> /
+								<a href="#" title="" class="link-soft-dark">Affiliate Program</a> /
+								<a href="#" title="" class="link-soft-dark">Terms</a> /
+								<a href="#" title="" class="link-soft-dark">Privacy Policy</a> /
+								<a href="#" title="" class="link-soft-dark">Store Locator</a> /
+								<a href="#" title="" class="link-soft-dark">Contact Us</a> /
+								<a href="#" title="" class="link-soft-dark">Refurbished Cameras</a> /
+								<a href="#" title="" class="link-soft-dark">Order Status</a> /
+								<a href="#" title="" class="link-soft-dark">Investor Relations</a> /
+								<a href="#" title="" class="link-soft-dark">Professional Broadcast</a>
+							</p>
+							<p class="color-gopro-concrete"><span class="icon-GoPro_Logo_All_Black_NoHero"></span> &copy; GoPro, Inc. all rights reserved. Patented USA. USA and international patents pending.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Sendmail modal -->
+		<div class="modal fade" id="sendmail-modal" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<button class="btn btn-close btn-std pull-right" data-dismiss="modal"><span class="icon-close"></span></button>
+							<h4 class="modal-title mgbot0dot3 mgtop0dot3">Send to a friend</h4>
+						</div>
+						<div class="col-sm-12 pd0 mgbot2dot0">
+							<div class="media-block">
+								<div class="overlay" style="background-image: url(http://streams.kolor.com/streams/b31d44a1-7075-4efc-a550-95fd6aedd1d9/thumb_600_300.jpg)"></div>
+								<div class="centered-content">
+									<div class="table">
+										<div class="cell">
+											<h5>short Title</h5>
+											<p class="text">author</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mgbot1dot0">
+							<div class="col-md-3">
+								<p class="text-label mgtop0dot8">Your e-mail</p>
+							</div>
+							<div class="col-md-9">
+								<div class="form-group form-minimal">
+									<div class="input-group">
+										<input type="email" class="form-control" value="email@domain.com">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mgbot1dot0">
+							<div class="col-md-3">
+								<p class="text-label mgtop0dot8">Recipient e-mail</p>
+							</div>
+							<div class="col-md-9">
+								<div class="form-group form-minimal">
+									<div class="input-group">
+										<input type="email" class="form-control" placeholder="Enter the recipient e-mail">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mgbot1dot0">
+							<div class="col-md-3">
+								<p class="text-label mgtop0dot8">Your message</p>
+							</div>
+							<div class="col-md-9">
+								<textarea class="form-minimal" rows="5"></textarea>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 text-right">
+								<button type="button" class="btn btn-std btn-no-stroke" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-std btn-primary">Send</button>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+
+		<!-- jQuery 2.1.4 -->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<!-- Bootstrap 3.3.5 -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/fn_video.js"></script>
+
+
+		<!-- DEV MENU -->
+		<div id="temp-nav-iframe"><iframe src="temp-nav.html"></iframe></div>
+		<!-- ./DEV MENU -->
+	</body>
+</html>
